@@ -1,0 +1,87 @@
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\bin\Debug\CVBASESWISS.exe.config
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\obj\Debug\CVBASESWISS.exe
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\obj\Debug\CVBASESWISS.pdb
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\bin\Debug\CVBASESWISS.exe
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\bin\Debug\CVBASESWISS.pdb
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\bin\Debug\EntityFramework.dll
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\bin\Debug\EntityFramework.xml
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\obj\Debug\CVBASESWISS.csprojResolveAssemblyReference.cache
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\obj\Debug\CVBASESWISS.Form1.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_auth.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_User.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_cvadd.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\obj\Debug\CVBASESWISS.Properties.Resources.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\obj\Debug\CVBASESWISS.csproj.GenerateResource.Cache
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS Rivo\CVBASESWISS\obj\Debug\CVBASESWISS.exe.licenses
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\bin\Debug\CVBASESWISS.exe.config
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\bin\Debug\CVBASESWISS.exe
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\bin\Debug\CVBASESWISS.pdb
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\bin\Debug\EntityFramework.dll
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\bin\Debug\EntityFramework.xml
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_Dash.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Form1.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_auth.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_User.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_cvadd.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_Search.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_PrintDash.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_PrintSearch.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_DATAWH.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_CCMAIL.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_RankingJ.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_RankingS.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_RankDipl.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_SetupCat.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_CC.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_UserAUTHO.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Properties.Resources.resources
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.csproj.GenerateResource.Cache
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.exe.licenses
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\RdlCompile.cache
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\RdlCompile.compiled
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.exe
+C:\Users\Rinah\Documents\Visual Studio 2012\Projects\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.pdb
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\Debug\CVBASESWISS.exe.config
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\Debug\CVBASESWISS.exe
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\Debug\CVBASESWISS.pdb
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\Debug\EntityFramework.dll
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\Debug\EntityFramework.SqlServer.dll
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\Debug\EntityFramework.xml
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\Debug\EntityFramework.SqlServer.xml
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\Debug\fr\EntityFramework.resources.dll
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.csprojAssemblyReference.cache
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\Interop.Domino.dll
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.csproj.ResolveComReference.cache
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Config.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_Dash.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Form1.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_auth.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_MODELM.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_User.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_cvadd.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_Search.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_PrintDash.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_PrintSearch.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_DATAWH.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_CCMAIL.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_RankingJ.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_RankDipl.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_SetupCat.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_CC.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_UserAUTHO.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_RankingS.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_HistoriUr.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Frm_Batch.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.Properties.Resources.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.csproj.GenerateResource.cache
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.csproj.CopyComplete
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.exe
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\Debug\CVBASESWISS.pdb

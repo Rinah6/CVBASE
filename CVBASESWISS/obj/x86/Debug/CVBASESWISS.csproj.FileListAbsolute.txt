@@ -1,0 +1,619 @@
+D:\Cv Base\CVBASESWISS\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe.config
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\Interop.Domino.dll
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.ResolveComReference.cache
+D:\Cv Base\CVBASESWISS\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe
+D:\Cv Base\CVBASESWISS\CVBASESWISS\bin\x86\Debug\CVBASESWISS.pdb
+D:\Cv Base\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.dll
+D:\Cv Base\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.dll
+D:\Cv Base\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.xml
+D:\Cv Base\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.xml
+D:\Cv Base\CVBASESWISS\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.resources.dll
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Config.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Dash.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Form1.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_auth.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_MODELM.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_User.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_cvadd.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Search.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintDash.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintSearch.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DATAWH.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CCMAIL.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingJ.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankDipl.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_SetupCat.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CC.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_UserAUTHO.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingS.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_HistoriUr.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Batch.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Properties.Resources.resources
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.GenerateResource.Cache
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\RdlCompile.cache
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\RdlCompile.compiled
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.exe
+D:\Cv Base\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.pdb
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe.config
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\CVBASESWISS.pdb
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.dll
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.dll
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.SqlServer.Types.dll
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.xml
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.xml
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.resources.dll
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\Interop.Domino.dll
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.ResolveComReference.cache
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Config.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Dash.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Form1.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_auth.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_MODELM.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_User.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_cvadd.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Search.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintDash.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintSearch.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DATAWH.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CCMAIL.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingJ.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankDipl.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_SetupCat.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CC.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_UserAUTHO.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingS.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_HistoriUr.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Batch.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Properties.Resources.resources
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.GenerateResource.cache
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CopyComplete
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.exe
+D:\CLIENT\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.pdb
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe.config
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\CVBASESWISS.pdb
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\BouncyCastle.Crypto.dll
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.dll
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.dll
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.xml
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.xml
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.pdb
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.pdb
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.pdb
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.pdb
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.resources.dll
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.AssemblyReference.cache
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\Interop.Domino.dll
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.ResolveComReference.cache
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Config.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Dash.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Form1.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_auth.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSModel.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSParameter.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_MODELM.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_User.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_cvadd.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Search.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintDash.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintSearch.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DATAWH.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CCMAIL.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingJ.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankDipl.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_SetupCat.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CC.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_UserAUTHO.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingS.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_HistoriUr.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Batch.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Properties.Resources.resources
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.GenerateResource.cache
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CoreCompileInputs.cache
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CopyComplete
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.exe
+C:\Projet\Dev\Client\CVBASE\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.pdb
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe.config
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\CVBASESWISS.pdb
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\BouncyCastle.Crypto.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.xml
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.xml
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.pdb
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.pdb
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.pdb
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.resources.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\fr\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\bin\x86\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.AssemblyReference.cache
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.SuggestedBindingRedirects.cache
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\Interop.Domino.dll
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.ResolveComReference.cache
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Config.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Dash.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Form1.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_auth.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSModel.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSParameter.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_MODELM.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_User.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_cvadd.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Search.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintDash.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintSearch.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DATAWH.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CCMAIL.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingJ.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankDipl.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_SetupCat.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CC.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_UserAUTHO.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingS.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_HistoriUr.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Batch.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Properties.Resources.resources
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.GenerateResource.cache
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CoreCompileInputs.cache
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CopyComplete
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.exe
+C:\Users\itsof\Desktop\CVBASESWISS(15-11-2022)\CVBASESWISS\CVBASESWISS\obj\x86\Debug\CVBASESWISS.pdb
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe.config
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\CVBASESWISS.pdb
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\BouncyCastle.Crypto.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\EntityFramework.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.xml
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\EntityFramework.xml
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.pdb
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.pdb
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.pdb
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.resources.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\fr\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\bin\x86\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.AssemblyReference.cache
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.SuggestedBindingRedirects.cache
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\Interop.Domino.dll
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.ResolveComReference.cache
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Config.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Dash.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Form1.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_auth.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSModel.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSParameter.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_MODELM.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_User.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_cvadd.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Search.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintDash.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintSearch.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DATAWH.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CCMAIL.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingJ.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankDipl.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_SetupCat.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CC.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_UserAUTHO.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingS.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_HistoriUr.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Batch.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Properties.Resources.resources
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.GenerateResource.cache
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CoreCompileInputs.cache
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CopyComplete
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.exe
+C:\Users\itsof\Desktop\CORRECTION CVBASE GIT\testCVB\CVBASESWISS\obj\x86\Debug\CVBASESWISS.pdb
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe.config
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\CVBASESWISS.pdb
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\BouncyCastle.Crypto.dll
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.dll
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.dll
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.xml
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.xml
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.pdb
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.pdb
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.pdb
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.pdb
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.resources.dll
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.AssemblyReference.cache
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.SuggestedBindingRedirects.cache
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\Interop.Domino.dll
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.ResolveComReference.cache
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Config.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Dash.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Form1.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_auth.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSModel.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSParameter.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_MODELM.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_User.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_cvadd.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Search.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintDash.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintSearch.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DATAWH.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CCMAIL.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingJ.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankDipl.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_SetupCat.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CC.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_UserAUTHO.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingS.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_HistoriUr.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Batch.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Properties.Resources.resources
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.GenerateResource.cache
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CoreCompileInputs.cache
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CopyComplete
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.exe
+C:\Projet\correction\final\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.pdb
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe.config
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\CVBASESWISS.pdb
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\BouncyCastle.Crypto.dll
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.dll
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.dll
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.xml
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.xml
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.pdb
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.pdb
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.pdb
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.pdb
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.resources.dll
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.AssemblyReference.cache
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.SuggestedBindingRedirects.cache
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\Interop.Domino.dll
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.ResolveComReference.cache
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Config.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Dash.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Form1.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_auth.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSModel.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSParameter.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_MODELM.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_User.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_cvadd.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Search.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintDash.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintSearch.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DATAWH.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CCMAIL.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingJ.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankDipl.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_SetupCat.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CC.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_UserAUTHO.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingS.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_HistoriUr.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Batch.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Properties.Resources.resources
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.GenerateResource.cache
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CoreCompileInputs.cache
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CopyComplete
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.exe
+C:\Projet\correction\testCVB-masterNEW\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.pdb
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe.config
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\CVBASESWISS.pdb
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\BouncyCastle.Crypto.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.xml
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.xml
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.pdb
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.pdb
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.pdb
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.resources.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.AssemblyReference.cache
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.SuggestedBindingRedirects.cache
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\Interop.Domino.dll
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.ResolveComReference.cache
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Config.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Dash.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Form1.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_auth.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSModel.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSParameter.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_MODELM.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_User.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_cvadd.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Search.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintDash.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintSearch.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DATAWH.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CCMAIL.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingJ.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankDipl.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_SetupCat.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CC.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_UserAUTHO.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingS.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_HistoriUr.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Batch.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Properties.Resources.resources
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.GenerateResource.cache
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CoreCompileInputs.cache
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CopyComplete
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.exe
+C:\Users\itsof\Desktop\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.pdb
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe.config
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\CVBASESWISS.pdb
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\BouncyCastle.Crypto.dll
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.dll
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.dll
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.xml
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.xml
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.pdb
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.pdb
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.pdb
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.pdb
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.resources.dll
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.AssemblyReference.cache
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.SuggestedBindingRedirects.cache
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\Interop.Domino.dll
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.ResolveComReference.cache
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Config.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Dash.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Form1.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_auth.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSModel.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSParameter.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_MODELM.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_User.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_cvadd.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Search.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintDash.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintSearch.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DATAWH.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CCMAIL.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingJ.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankDipl.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_SetupCat.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CC.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_UserAUTHO.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingS.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_HistoriUr.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Batch.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Properties.Resources.resources
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.GenerateResource.cache
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CoreCompileInputs.cache
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CopyComplete
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.exe
+C:\Projet\Dev\Client\CVBase0\testCVB-master 01122022\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.pdb
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe.config
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\CVBASESWISS.exe
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\CVBASESWISS.pdb
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\BouncyCastle.Crypto.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\DocuSign.eSign.xml
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.xml
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.pdb
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.pdb
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.pdb
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.resources.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\bin\x86\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.AssemblyReference.cache
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\Interop.Domino.dll
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.ResolveComReference.cache
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Config.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Dash.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Form1.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_auth.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSModel.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DSParameter.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_MODELM.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_User.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_cvadd.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Search.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintDash.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_PrintSearch.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_DATAWH.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CCMAIL.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingJ.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankDipl.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_SetupCat.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_CC.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_UserAUTHO.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_RankingS.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_HistoriUr.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Frm_Batch.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.Properties.Resources.resources
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.GenerateResource.cache
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.csproj.CoreCompileInputs.cache
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.exe
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESWISS.pdb
+C:\Users\Rinah\Desktop\ABUREAU\SWISS\MAJ FEV2023 RINAH\CVBASE\testCVB-master\CVBASESWISS\obj\x86\Debug\CVBASESW.A3CCBBD4.Up2Date

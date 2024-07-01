@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C00B4E8-6CBD-48C8-AE95-851805962274}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CVBASESWISS</RootNamespace>
+    <AssemblyName>CVBASESWISS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LOGOICO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DocuSign.eSign, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7fca6fcbbc219ede, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocuSign.eSign.dll.6.0.0\lib\net452\DocuSign.eSign.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.5.4.0\lib\net451\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.5.4.0\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=5.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.5.4.0\lib\net451\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.4.0\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.4.0\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSetting.cs" />
+    <Compile Include="Cipher.cs" />
+    <Compile Include="Model\CV_TOWNS.cs" />
+    <Compile Include="Form\Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Config.Designer.cs">
+      <DependentUpon>Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="connectionstring.cs" />
+    <Compile Include="CVBASEDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CVBASEDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CVBASEDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CVBASEDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Frm_Batch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_Batch.Designer.cs">
+      <DependentUpon>Frm_Batch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Frm_DSParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_DSParameter.Designer.cs">
+      <DependentUpon>Frm_DSParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Frm_DSModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_DSModel.Designer.cs">
+      <DependentUpon>Frm_DSModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CV_BATCH.cs" />
+    <Compile Include="Form\Frm_HistoriUr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_HistoriUr.designer.cs">
+      <DependentUpon>Frm_HistoriUr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CV_DOCUSIGN.cs" />
+    <Compile Include="Model\CV_HISTOUR.cs" />
+    <Compile Include="Form\Frm_MODELM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_MODELM.Designer.cs">
+      <DependentUpon>Frm_MODELM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CV_TEMPORDERCVRANK.cs" />
+    <Compile Include="Form\Frm_RankingS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_RankingS.designer.cs">
+      <DependentUpon>Frm_RankingS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CV_TEST.cs" />
+    <Compile Include="Model\CV_EPRO.cs" />
+    <Compile Include="Model\CV_EPROFIL.cs" />
+    <Compile Include="Model\CV_EPROWL.cs" />
+    <Compile Include="Model\CV_ONCHAT.cs" />
+    <Compile Include="Model\CV_ONCHATAVA.cs" />
+    <Compile Include="Model\CV_ONCHATPLAT.cs" />
+    <Compile Include="Model\CV_PLACE.cs" />
+    <Compile Include="Form\Frm_UserAUTHO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_UserAUTHO.designer.cs">
+      <DependentUpon>Frm_UserAUTHO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CV_AUTHORMDP.cs" />
+    <Compile Include="Form\Frm_CC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_CC.Designer.cs">
+      <DependentUpon>Frm_CC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CV_CCMAIL.cs" />
+    <Compile Include="Form\Frm_SetupCat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_SetupCat.Designer.cs">
+      <DependentUpon>Frm_SetupCat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CV_RANKDIPLOMA.cs" />
+    <Compile Include="Form\Frm_RankDipl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_RankDipl.Designer.cs">
+      <DependentUpon>Frm_RankDipl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CV_RANKJUN.cs" />
+    <Compile Include="Model\CV_RANKSEN.cs" />
+    <Compile Include="Form\Frm_RankingJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_RankingJ.Designer.cs">
+      <DependentUpon>Frm_RankingJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CV_DATASET.cs" />
+    <Compile Include="Form\Frm_DATAWH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_DATAWH.Designer.cs">
+      <DependentUpon>Frm_DATAWH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Frm_ChoiceDATA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_ChoiceDATA.Designer.cs">
+      <DependentUpon>Frm_ChoiceDATA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CV_DATAWH.cs" />
+    <Compile Include="Model\CV_PRINTSEARCH.cs" />
+    <Compile Include="Form\Frm_PrintSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_PrintSearch.Designer.cs">
+      <DependentUpon>Frm_PrintSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CV_PRINTDASH.cs" />
+    <Compile Include="Form\Frm_PrintDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_PrintDash.Designer.cs">
+      <DependentUpon>Frm_PrintDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CV_SAVESEARCH.cs" />
+    <Compile Include="Form\Frm_Dash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_Dash.Designer.cs">
+      <DependentUpon>Frm_Dash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Frm_Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_Search.Designer.cs">
+      <DependentUpon>Frm_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CV_CATEGORY.cs" />
+    <Compile Include="Model\CV_CLIENT.cs" />
+    <Compile Include="Model\CV_CVBASE.cs" />
+    <Compile Include="Model\CV_DIPLOMA.cs" />
+    <Compile Include="Model\CV_DOC.cs" />
+    <Compile Include="Model\CV_DOCDATECOMM.cs" />
+    <Compile Include="Model\CV_DOCUMENT.cs" />
+    <Compile Include="Model\CV_EDUC.cs" />
+    <Compile Include="Model\CV_EMPLOYEE.cs" />
+    <Compile Include="Model\CV_EXPCOMMENT.cs" />
+    <Compile Include="Model\CV_EXPSWTPH.cs" />
+    <Compile Include="Model\CV_GAPPREC.cs" />
+    <Compile Include="Model\CV_GENDER.cs" />
+    <Compile Include="Model\CV_GRAD.cs" />
+    <Compile Include="Model\CV_GRADUATE.cs" />
+    <Compile Include="Model\CV_INTLCOMMENT.cs" />
+    <Compile Include="Model\CV_INTLEXPTECH.cs" />
+    <Compile Include="Model\CV_INTLREGEXP.cs" />
+    <Compile Include="Model\CV_JUNSENIOR.cs" />
+    <Compile Include="Model\CV_LANGUAGE.cs" />
+    <Compile Include="Model\CV_NATIONS.cs" />
+    <Compile Include="Model\CV_NOTECRITERIA.cs" />
+    <Compile Include="Model\CV_REGION.cs" />
+    <Compile Include="Model\CV_ROLE.cs" />
+    <Compile Include="Model\CV_SPECIALITY.cs" />
+    <Compile Include="Model\CV_TECHNICFIELD.cs" />
+    <Compile Include="Model\CV_UNIT.cs" />
+    <Compile Include="Model\CV_USERS.cs" />
+    <Compile Include="Model\CV_VISITSPMU.cs" />
+    <Compile Include="Model\CV_WRSP.cs" />
+    <Compile Include="Model\CV_WRSPLEVEL.cs" />
+    <Compile Include="DbCVBASE.cs" />
+    <Compile Include="Form\Frm_cvadd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_cvadd.Designer.cs">
+      <DependentUpon>Frm_cvadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Frm_auth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_auth.Designer.cs">
+      <DependentUpon>Frm_auth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Frm_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_User.Designer.cs">
+      <DependentUpon>Frm_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\dsParameter.cs" />
+    <Compile Include="Model\DS_SIGN.cs" />
+    <Compile Include="Model\P_Directory.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="Token.cs" />
+    <EmbeddedResource Include="Form\Config.resx">
+      <DependentUpon>Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_Dash.resx">
+      <DependentUpon>Frm_Dash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_auth.resx">
+      <DependentUpon>Frm_auth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_DSModel.resx">
+      <DependentUpon>Frm_DSModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_DSParameter.resx">
+      <DependentUpon>Frm_DSParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_MODELM.resx">
+      <DependentUpon>Frm_MODELM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_User.resx">
+      <DependentUpon>Frm_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_cvadd.resx">
+      <DependentUpon>Frm_cvadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_Search.resx">
+      <DependentUpon>Frm_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_PrintDash.resx">
+      <DependentUpon>Frm_PrintDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_PrintSearch.resx">
+      <DependentUpon>Frm_PrintSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_DATAWH.resx">
+      <DependentUpon>Frm_DATAWH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_ChoiceDATA.resx">
+      <DependentUpon>Frm_ChoiceDATA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_RankingJ.resx">
+      <DependentUpon>Frm_RankingJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_RankDipl.resx">
+      <DependentUpon>Frm_RankDipl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_SetupCat.resx">
+      <DependentUpon>Frm_SetupCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_CC.resx">
+      <DependentUpon>Frm_CC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_UserAUTHO.resx">
+      <DependentUpon>Frm_UserAUTHO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_RankingS.resx">
+      <DependentUpon>Frm_RankingS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_HistoriUr.resx">
+      <DependentUpon>Frm_HistoriUr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_Batch.resx">
+      <DependentUpon>Frm_Batch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Prints\ReportDash.rdlc" />
+    <EmbeddedResource Include="Prints\ReportSearch.rdlc" />
+    <None Include="CVBASEDataSet.xsc">
+      <DependentUpon>CVBASEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CVBASEDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CVBASEDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CVBASEDataSet.xss">
+      <DependentUpon>CVBASEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CVBASEDataSet1.xsc">
+      <DependentUpon>CVBASEDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CVBASEDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CVBASEDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CVBASEDataSet1.xss">
+      <DependentUpon>CVBASEDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LOGOICO.ico" />
+    <None Include="Resources\tools.png" />
+    <None Include="Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Domino">
+      <Guid>{29131520-2EED-1069-BF5D-00DD011186B7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
