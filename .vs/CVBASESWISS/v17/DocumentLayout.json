@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Rinah\\Desktop\\ABUREAU\\SWISS\\MAJ FEV2023 RINAH\\CVBASE\\testCVB-master\\",
+  "WorkspaceRootPath": "C:\\Users\\Rinah\\Desktop\\CVBASE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C00B4E8-6CBD-48C8-AE95-851805962274}|CVBASESWISS\\CVBASESWISS.csproj|c:\\users\\rinah\\desktop\\abureau\\swiss\\maj fev2023 rinah\\cvbase\\testcvb-master\\cvbaseswiss\\form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C00B4E8-6CBD-48C8-AE95-851805962274}|CVBASESWISS\\CVBASESWISS.csproj|solutionrelative:cvbaseswiss\\form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C00B4E8-6CBD-48C8-AE95-851805962274}|CVBASESWISS\\CVBASESWISS.csproj|c:\\users\\rinah\\desktop\\abureau\\swiss\\maj fev2023 rinah\\cvbase\\testcvb-master\\cvbaseswiss\\form\\frm_cvadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C00B4E8-6CBD-48C8-AE95-851805962274}|CVBASESWISS\\CVBASESWISS.csproj|c:\\users\\rinah\\desktop\\cvbase\\cvbaseswiss\\form\\frm_cvadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C00B4E8-6CBD-48C8-AE95-851805962274}|CVBASESWISS\\CVBASESWISS.csproj|solutionrelative:cvbaseswiss\\form\\frm_cvadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C00B4E8-6CBD-48C8-AE95-851805962274}|CVBASESWISS\\CVBASESWISS.csproj|c:\\users\\rinah\\desktop\\abureau\\swiss\\maj fev2023 rinah\\cvbase\\testcvb-master\\cvbaseswiss\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{0C00B4E8-6CBD-48C8-AE95-851805962274}|CVBASESWISS\\CVBASESWISS.csproj|solutionrelative:cvbaseswiss\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{0C00B4E8-6CBD-48C8-AE95-851805962274}|CVBASESWISS\\CVBASESWISS.csproj|c:\\users\\rinah\\desktop\\cvbase\\cvbaseswiss\\form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C00B4E8-6CBD-48C8-AE95-851805962274}|CVBASESWISS\\CVBASESWISS.csproj|solutionrelative:cvbaseswiss\\form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C00B4E8-6CBD-48C8-AE95-851805962274}|CVBASESWISS\\CVBASESWISS.csproj|C:\\Users\\Rinah\\Desktop\\ABUREAU\\SWISS\\MAJ FEV2023 RINAH\\CVBASE\\testCVB-master\\cvbaseswiss\\form\\frm_cvadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0C00B4E8-6CBD-48C8-AE95-851805962274}|CVBASESWISS\\CVBASESWISS.csproj|c:\\users\\rinah\\desktop\\cvbase\\cvbaseswiss\\form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0C00B4E8-6CBD-48C8-AE95-851805962274}|CVBASESWISS\\CVBASESWISS.csproj|solutionrelative:cvbaseswiss\\form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C00B4E8-6CBD-48C8-AE95-851805962274}|CVBASESWISS\\CVBASESWISS.csproj|C:\\Users\\Rinah\\Desktop\\CVBASE\\cvbaseswiss\\form\\frm_cvadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0C00B4E8-6CBD-48C8-AE95-851805962274}|CVBASESWISS\\CVBASESWISS.csproj|solutionrelative:cvbaseswiss\\form\\frm_cvadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -26,54 +26,53 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Rinah\\Desktop\\ABUREAU\\SWISS\\MAJ FEV2023 RINAH\\CVBASE\\testCVB-master\\CVBASESWISS\\Form\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Rinah\\Desktop\\CVBASE\\CVBASESWISS\\Form\\Form1.cs",
               "RelativeDocumentMoniker": "CVBASESWISS\\Form\\Form1.cs",
-              "ToolTip": "C:\\Users\\Rinah\\Desktop\\ABUREAU\\SWISS\\MAJ FEV2023 RINAH\\CVBASE\\testCVB-master\\CVBASESWISS\\Form\\Form1.cs",
+              "ToolTip": "C:\\Users\\Rinah\\Desktop\\CVBASE\\CVBASESWISS\\Form\\Form1.cs",
               "RelativeToolTip": "CVBASESWISS\\Form\\Form1.cs",
-              "ViewState": "AQIAAI0AAAAAAAAAAAAawKQAAAAQAAAA",
+              "ViewState": "AQIAAHgBAAAAAAAAAAAcwJ4BAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T11:22:17.449Z",
+              "WhenOpened": "2024-07-08T19:22:03.314Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\Rinah\\Desktop\\ABUREAU\\SWISS\\MAJ FEV2023 RINAH\\CVBASE\\testCVB-master\\CVBASESWISS\\App.config",
-              "RelativeDocumentMoniker": "CVBASESWISS\\App.config",
-              "ToolTip": "C:\\Users\\Rinah\\Desktop\\ABUREAU\\SWISS\\MAJ FEV2023 RINAH\\CVBASE\\testCVB-master\\CVBASESWISS\\App.config",
-              "RelativeToolTip": "CVBASESWISS\\App.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-07-01T11:22:08.898Z",
-              "EditorCaption": ""
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Rinah\\Desktop\\CVBASE\\CVBASESWISS\\Form\\Form1.cs",
+              "RelativeDocumentMoniker": "CVBASESWISS\\Form\\Form1.cs",
+              "ToolTip": "C:\\Users\\Rinah\\Desktop\\CVBASE\\CVBASESWISS\\Form\\Form1.cs [Design]",
+              "RelativeToolTip": "CVBASESWISS\\Form\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-08T19:20:47.532Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Frm_cvadd.cs",
-              "DocumentMoniker": "C:\\Users\\Rinah\\Desktop\\ABUREAU\\SWISS\\MAJ FEV2023 RINAH\\CVBASE\\testCVB-master\\CVBASESWISS\\Form\\Frm_cvadd.cs",
+              "DocumentMoniker": "C:\\Users\\Rinah\\Desktop\\CVBASE\\CVBASESWISS\\Form\\Frm_cvadd.cs",
               "RelativeDocumentMoniker": "CVBASESWISS\\Form\\Frm_cvadd.cs",
-              "ToolTip": "C:\\Users\\Rinah\\Desktop\\ABUREAU\\SWISS\\MAJ FEV2023 RINAH\\CVBASE\\testCVB-master\\CVBASESWISS\\Form\\Frm_cvadd.cs",
+              "ToolTip": "C:\\Users\\Rinah\\Desktop\\CVBASE\\CVBASESWISS\\Form\\Frm_cvadd.cs",
               "RelativeToolTip": "CVBASESWISS\\Form\\Frm_cvadd.cs",
-              "ViewState": "AQIAAFUAAAAAAAAAAAAawGwAAAAMAAAA",
+              "ViewState": "AQIAAC8dAAAAAAAAAAA5wEgdAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-05T12:06:34.138Z",
+              "WhenOpened": "2024-07-08T19:12:39.185Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Frm_cvadd.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Rinah\\Desktop\\ABUREAU\\SWISS\\MAJ FEV2023 RINAH\\CVBASE\\testCVB-master\\CVBASESWISS\\Form\\Frm_cvadd.cs",
+              "DocumentMoniker": "C:\\Users\\Rinah\\Desktop\\CVBASE\\CVBASESWISS\\Form\\Frm_cvadd.cs",
               "RelativeDocumentMoniker": "CVBASESWISS\\Form\\Frm_cvadd.cs",
-              "ToolTip": "C:\\Users\\Rinah\\Desktop\\ABUREAU\\SWISS\\MAJ FEV2023 RINAH\\CVBASE\\testCVB-master\\CVBASESWISS\\Form\\Frm_cvadd.cs [Design]",
+              "ToolTip": "C:\\Users\\Rinah\\Desktop\\CVBASE\\CVBASESWISS\\Form\\Frm_cvadd.cs [Design]",
               "RelativeToolTip": "CVBASESWISS\\Form\\Frm_cvadd.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2023-12-05T12:06:31.703Z",

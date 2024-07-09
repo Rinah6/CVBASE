@@ -18,6 +18,10 @@ namespace CVBASESWISS
 {
     public partial class Form1 : Form
     {
+        public static DateTime D1;
+        public static DateTime D2;
+        public static DateTime D3;
+
         public Form1()
         {
             InitializeComponent();
@@ -162,6 +166,10 @@ namespace CVBASESWISS
                 table.Columns.Add("@Mail1");
                 //table.Columns.Add("Person of ref.");
 
+                table.Columns["Date of creation"].DataType = System.Type.GetType("System.DateTime");
+                table.Columns["Date of CV"].DataType = System.Type.GetType("System.DateTime");
+                table.Columns["Birthday"].DataType = System.Type.GetType("System.DateTime");
+
                 table.Rows.Clear();
 
                 if (String.IsNullOrEmpty(search))
@@ -178,11 +186,11 @@ namespace CVBASESWISS
 
                             var dateCreate = "";
                             if (x.DateSave != null)
-                                dateCreate = x.DateSave.Value.ToShortDateString();
+                                D1 = x.DateSave.Value;
 
                             var dateCV = "";
                             if (x.DateCV != null)
-                                dateCV = x.DateCV.Value.ToShortDateString();
+                                D2 = x.DateCV.Value;
 
                             var Lastname = x.LastName;
 
@@ -192,7 +200,7 @@ namespace CVBASESWISS
                             var age = "";
                             if (x.BirthDay != null)
                             {
-                                BD = x.BirthDay.Value.ToShortDateString();
+                                D3 = x.BirthDay.Value;
 
                                 var dtNo = DateTime.Now;
 
@@ -273,7 +281,7 @@ namespace CVBASESWISS
                                 persRef = pers.PersRef;
                             }*/
 
-                            table.Rows.Add(id, stat, dateCreate, dateCV, Lastname, Firstname, BD, age, givenAge, gender, nation, junS, catE,/* ad1, zip, town, countr,*/ mobil, landline, mail/*, persRef*/);
+                            table.Rows.Add(id, stat, D1, D2, Lastname, Firstname, D3, age, givenAge, gender, nation, junS, catE,/* ad1, zip, town, countr,*/ mobil, landline, mail/*, persRef*/);
                         }
                     }
                 }
@@ -291,11 +299,11 @@ namespace CVBASESWISS
 
                             var dateCreate = "";
                             if (x.DateSave != null)
-                                dateCreate = x.DateSave.Value.ToShortDateString();
+                                D1 = x.DateSave.Value;
 
                             var dateCV = "";
                             if (x.DateCV != null)
-                                dateCV = x.DateCV.Value.ToShortDateString();
+                                D2 = x.DateCV.Value;
 
                             var Lastname = "";
                             if(x.LastName != null)
@@ -309,7 +317,7 @@ namespace CVBASESWISS
                             var age = "";
                             if (x.BirthDay != null)
                             {
-                                BD = x.BirthDay.Value.ToShortDateString();
+                                D3 = x.BirthDay.Value;
 
                                 var dtNo = DateTime.Now;
 
@@ -404,7 +412,7 @@ namespace CVBASESWISS
                                 || gender.ToUpper().Contains(search.ToUpper()) || nation.ToUpper().Contains(search.ToUpper()) || junS.ToUpper().Contains(search.ToUpper()) || catE.ToUpper().Contains(search.ToUpper()) || mobil.ToUpper().Contains(search.ToUpper())
                                 || landline.ToUpper().Contains(search.ToUpper()) || mail.ToUpper().Contains(search.ToUpper()))
                             {
-                                table.Rows.Add(id, stat, dateCreate, dateCV, Lastname, Firstname, BD, age, givenAge, gender, nation, junS, catE/*, ad1, zip, town, countr, */, mobil, landline, mail/*, persRef*/);
+                                table.Rows.Add(id, stat, D1, D2, Lastname, Firstname, D3, age, givenAge, gender, nation, junS, catE/*, ad1, zip, town, countr, */, mobil, landline, mail/*, persRef*/);
                             }
                         }
                     }
@@ -413,6 +421,10 @@ namespace CVBASESWISS
                 gridListe.DataSource = table;
 
                 gridListe.Columns[0].Visible = false;
+
+                //gridListe.Columns[2].DefaultCellStyle.Format = "dd-MM-yyyy";
+                //gridListe.Columns[3].DefaultCellStyle.Format = "dd-MM-yyyy";
+                //gridListe.Columns[6].DefaultCellStyle.Format = "dd-MM-yyyy";
 
                 var dataco = "";
                 int isco = Token.getisCO();

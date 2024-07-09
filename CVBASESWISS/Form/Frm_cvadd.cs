@@ -191,7 +191,8 @@ namespace CVBASESWISS
             comboDoc5.DataSource = itmDoc5;
             //comboDoc6.DataSource = itmDoc6;
 
-            comboDoc6.Text = "Data retention authorisation";
+            //comboDoc6.Text = "Data retention authorisation";
+            comboDoc6.Text = "Personal Data Retention Authorisation";
 
             //Diplome//
             List<String> itmDipl1 = new List<String>();
@@ -1467,6 +1468,8 @@ namespace CVBASESWISS
             {
                 if (!AllTextBox.ContainsKey(item.Name)) AllTextBox.Add(item.Name, item.Text);
             }
+            AllTextBox.Add(textExpSWISSComm.Name, textExpSWISSComm.Text);
+
             foreach (var item in combol)
             {
                 if (!AllComboBox.ContainsKey(item.Name)) AllComboBox.Add(item.Name, item.Text);
@@ -1475,8 +1478,6 @@ namespace CVBASESWISS
             {
                 if (!AllCheckBox.ContainsKey(item.Name)) AllCheckBox.Add(item.Name, item.CheckState);
             }
-
-
         }
         public void DetailsCV(string LastName)
         {
@@ -2445,500 +2446,501 @@ namespace CVBASESWISS
                     //    string mssgyellow="";
                     //    string mssg="";
                     if (CANSAVE == true)
+                    {
+
+                        if (yellowfields == false)
                         {
-                           
-                            if (yellowfields == false)
+                            mssgyellow += "Warning we will save but you have not filled  : \n";
+
+                            foreach (var i in notmandatory)
                             {
-                                mssgyellow += "Warning we will save but you have not filled  : \n";
-                               
-                                foreach (var i in notmandatory)
-                                {
-                                    mssgyellow += i.Value + "\n";
-                                }
-                                mssg += mssgyellow;
+                                mssgyellow += i.Value + "\n";
                             }
+                            mssg += mssgyellow;
+                        }
 
-                            //Sleep//
-                            var sleep = false;
-                            var sleepCom = "";
-                            if (checkSleep.Checked)
+                        //Sleep//
+                        var sleep = false;
+                        var sleepCom = "";
+                        if (checkSleep.Checked)
+                        {
+                            sleep = true;
+                            sleepCom = textSleepComment.Text;
+                        }
+
+                        //Title//
+                        var title = false;
+                        if (comboTitle.Text == "Mr.")
+                            title = true;
+
+                        //LastName//
+                        var lastName = comboName.Text;
+
+                        //Prenom//
+                        var firstName = textPrenom.Text;
+
+                        //Gender//
+                        var gender = 0;
+                        if (soft.CV_GENDER.Where(a => a.Gender == comboGender.Text).Count() != 0)
+                        {
+                            gender = soft.CV_GENDER.Where(a => a.Gender == comboGender.Text).FirstOrDefault().IDGender;
+                        }
+
+                        //DateCV//
+                        DateTime datecv = new DateTime();
+                        if (!String.IsNullOrEmpty(textdateCV.Text))
+                            datecv = DateTime.Parse(textdateCV.Text).Date;
+
+                        //Birthday//
+                        DateTime birtDay = new DateTime();
+                        if (!String.IsNullOrEmpty(textdateBirthDay.Text))
+                            birtDay = DateTime.Parse(textdateBirthDay.Text).Date;
+                        //DateTime birtDay = DateTime.Parse(textdateBirthDay.Text).Date;
+                        //DateTime birtDay = dateBirthDay.Value.Date;
+
+                        //Adress1//
+                        var adress1 = textAdress1.Text;
+
+                        //ZipCode//
+                        var zipCode = textZipCode.Text;
+
+                        //Nationality//
+                        var nationality = 0;
+                        if (!String.IsNullOrEmpty(comboNationality.Text))
+                        {
+                            if (soft.CV_NATIONS.Where(a => a.Country == comboNationality.Text).Count() != 0)
                             {
-                                sleep = true;
-                                sleepCom = textSleepComment.Text;
+                                nationality = soft.CV_NATIONS.Where(a => a.Country == comboNationality.Text).FirstOrDefault().IDCountry;
                             }
+                        }
 
-                            //Title//
-                            var title = false;
-                            if (comboTitle.Text == "Mr.")
-                                title = true;
+                        //Adress2//
+                        var adress2 = textAdress2.Text;
+                        //Adress3//
+                        var adress3 = textAdress3.Text;
 
-                            //LastName//
-                            var lastName = comboName.Text;
-
-                            //Prenom//
-                            var firstName = textPrenom.Text;
-
-                            //Gender//
-                            var gender = 0;
-                            if (soft.CV_GENDER.Where(a => a.Gender == comboGender.Text).Count() != 0)
+                        //Cat//
+                        var cat = 0;
+                        if (!String.IsNullOrEmpty(comboCat.Text))
+                        {
+                            if (soft.CV_CATEGORY.Where(a => a.Category == comboCat.Text).Count() != 0)
                             {
-                                gender = soft.CV_GENDER.Where(a => a.Gender == comboGender.Text).FirstOrDefault().IDGender;
+                                cat = soft.CV_CATEGORY.Where(a => a.Category == comboCat.Text).FirstOrDefault().IDCat;
                             }
+                        }
 
-                            //DateCV//
-                            DateTime datecv = new DateTime();
-                            if (!String.IsNullOrEmpty(textdateCV.Text))
-                                datecv = DateTime.Parse(textdateCV.Text).Date;
-
-                            //Birthday//
-                            DateTime birtDay = new DateTime();
-                            if (!String.IsNullOrEmpty(textdateBirthDay.Text))
-                                birtDay = DateTime.Parse(textdateBirthDay.Text).Date;
-                            //DateTime birtDay = DateTime.Parse(textdateBirthDay.Text).Date;
-                            //DateTime birtDay = dateBirthDay.Value.Date;
-
-                            //Adress1//
-                            var adress1 = textAdress1.Text;
-
-                            //ZipCode//
-                            var zipCode = textZipCode.Text;
-
-                            //Nationality//
-                            var nationality = 0;
-                            if (!String.IsNullOrEmpty(comboNationality.Text))
+                        //Given Age//
+                        var givenAge = 0;
+                        if (String.IsNullOrEmpty(textdateBirthDay.Text))
+                        {
+                            if (!String.IsNullOrEmpty(textGivenAge.Text))
                             {
-                                if (soft.CV_NATIONS.Where(a => a.Country == comboNationality.Text).Count() != 0)
-                                {
-                                    nationality = soft.CV_NATIONS.Where(a => a.Country == comboNationality.Text).FirstOrDefault().IDCountry;
-                                }
+                                givenAge = int.Parse(textGivenAge.Text);
                             }
+                        }
 
-                            //Adress2//
-                            var adress2 = textAdress2.Text;
-                            //Adress3//
-                            var adress3 = textAdress3.Text;
-
-                            //Cat//
-                            var cat = 0;
-                            if (!String.IsNullOrEmpty(comboCat.Text))
+                        //Country//
+                        var country = 0;
+                        if (!String.IsNullOrEmpty(comboCountry.Text))
+                        {
+                            if (soft.CV_NATIONS.Where(a => a.Country == comboCountry.Text).Count() != 0)
                             {
-                                if (soft.CV_CATEGORY.Where(a => a.Category == comboCat.Text).Count() != 0)
-                                {
-                                    cat = soft.CV_CATEGORY.Where(a => a.Category == comboCat.Text).FirstOrDefault().IDCat;
-                                }
+                                country = soft.CV_NATIONS.Where(a => a.Country == comboCountry.Text).FirstOrDefault().IDCountry;
                             }
+                        }
 
-                            //Given Age//
-                            var givenAge = 0;
-                            if (String.IsNullOrEmpty(textdateBirthDay.Text))
+                        //TOWN//
+                        var twn = 0;
+                        if (!String.IsNullOrEmpty(comboTOWN.Text))
+                        {
+                            if (soft.CV_TOWNS.Where(a => a.TOWN == comboTOWN.Text).Count() != 0)
                             {
-                                if (!String.IsNullOrEmpty(textGivenAge.Text))
-                                {
-                                    givenAge = int.Parse(textGivenAge.Text);
-                                }
+                                twn = soft.CV_TOWNS.Where(a => a.TOWN == comboTOWN.Text).FirstOrDefault().ID;
                             }
-
-                            //Country//
-                            var country = 0;
-                            if (!String.IsNullOrEmpty(comboCountry.Text))
-                            {
-                                if (soft.CV_NATIONS.Where(a => a.Country == comboCountry.Text).Count() != 0)
-                                {
-                                    country = soft.CV_NATIONS.Where(a => a.Country == comboCountry.Text).FirstOrDefault().IDCountry;
-                                }
-                            }
-
-                            //TOWN//
-                            var twn = 0;
-                            if (!String.IsNullOrEmpty(comboTOWN.Text))
-                            {
-                                if (soft.CV_TOWNS.Where(a => a.TOWN == comboTOWN.Text).Count() != 0)
-                                {
-                                    twn = soft.CV_TOWNS.Where(a => a.TOWN == comboTOWN.Text).FirstOrDefault().ID;
-                                }
-                            }
+                        }
 
                         //Mobil//
                         var mobil = textMobilPhone.Text;
-                            //Mobil2//
-                            var mobil2 = textMobilPhone2.Text;
+                        //Mobil2//
+                        var mobil2 = textMobilPhone2.Text;
 
-                            //Email1//
-                            var email1 = textMail1.Text;
+                        //Email1//
+                        var email1 = textMail1.Text;
 
-                            //PersTPH//
-                            var persTPH = 0;
-                            if (!String.IsNullOrEmpty(comboPersTPH.Text))
+                        //PersTPH//
+                        var persTPH = 0;
+                        if (!String.IsNullOrEmpty(comboPersTPH.Text))
+                        {
+                            if (soft.CV_EMPLOYEE.Where(a => a.PersRef == comboPersTPH.Text).Count() != 0)
                             {
-                                if (soft.CV_EMPLOYEE.Where(a => a.PersRef == comboPersTPH.Text).Count() != 0)
+                                persTPH = soft.CV_EMPLOYEE.Where(a => a.PersRef == comboPersTPH.Text).FirstOrDefault().IDPersRef;
+                            }
+                        }
+
+                        //Landlinephone//
+                        var landPhone = textLandlinePhone.Text;
+
+                        //Email2//
+                        var email2 = textMail2.Text;
+
+                        //SKYPE//
+                        var skype = textSkype.Text;
+
+                        //DailyFees//
+                        var dailyFee = textDailyFees.Text;
+
+                        //DateIntefview//
+                        DateTime interview = new DateTime();
+                        if (!String.IsNullOrEmpty(textdateInterview.Text))
+                            interview = DateTime.Parse(textdateInterview.Text).Date;
+                        //DateTime interview = DateTime.Parse(textdateInterview.Text).Date;
+
+                        //ShortListed//
+                        var shortL = false;
+                        if (comboShortListed.Text == "YES")
+                        {
+                            shortL = true;
+                        }
+
+                        //JUNSEN//
+                        var junsen = 0;
+                        if (!String.IsNullOrEmpty(comboJunSenior.Text))
+                        {
+                            if (soft.CV_JUNSENIOR.Where(a => a.JunSenior == comboJunSenior.Text).Count() != 0)
+                            {
+                                junsen = soft.CV_JUNSENIOR.Where(a => a.JunSenior == comboJunSenior.Text).FirstOrDefault().IDJunSenior;
+                            }
+                        }
+
+                        //Commentaire//
+                        var commentaire = textComCV.Text;
+                        DialogResult result = new DialogResult();
+                        //Commentaire//
+                        //var why = textWhy.Text;
+                        if (!yellowfields)
+                        {
+                            result = MessageBox.Show(mssgyellow, "CVBASE", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+                        }
+
+                        if (result == DialogResult.OK || yellowfields == true)
+                        {
+                            /////INSERTION/////
+                            if (soft.CV_CVBASE.Where(a => a.LastName == comboName.Text).Count() == 0)
+                            {
+                                var cv = new CV_CVBASE
                                 {
-                                    persTPH = soft.CV_EMPLOYEE.Where(a => a.PersRef == comboPersTPH.Text).FirstOrDefault().IDPersRef;
-                                }
+                                    Sleep = sleep,
+                                    SleepComments = sleepCom,
+                                    Title = title,
+                                    LastName = lastName,
+                                    FirstName = firstName,
+                                    IDGender = gender,
+                                    Adress1 = adress1,
+                                    Adress2 = adress2,
+                                    Adress3 = adress3,
+                                    ZipCode = zipCode,
+                                    IDNationality = nationality,
+                                    IDTOWN = twn,
+                                    IDCat = cat,
+                                    IDCountry = country,
+                                    MobilPhone = mobil,
+                                    MobilPhone2 = mobil2,
+                                    LandlinePhone = landPhone,
+                                    Email1 = email1,
+                                    Email2 = email2,
+                                    IDPersRef = persTPH,
+                                    ExpDailyFees = dailyFee,
+                                    ShortListed = shortL,
+                                    IDJunSenior = junsen,
+                                    Comments = commentaire,
+                                    GivenAge = givenAge,
+                                    DateSave = DateTime.Now.Date,
+                                    WEB = false,
+                                    Skype = skype
+                                    //WHY = why
+                                };
+                                soft.CV_CVBASE.Add(cv);
+                                soft.SaveChanges();
+
+                                var isForModif = soft.CV_CVBASE.Where(a => a.LastName == comboName.Text).FirstOrDefault();
+                                //Update ALL DATE//
+                                if (!String.IsNullOrEmpty(textdateCV.Text))
+                                    isForModif.DateCV = datecv;
+                                if (!String.IsNullOrEmpty(textdateBirthDay.Text))
+                                    isForModif.BirthDay = birtDay;
+                                if (!String.IsNullOrEmpty(textdateInterview.Text))
+                                    isForModif.DateSPMU = interview;
+
+                                soft.SaveChanges();
+
+                                //Insert ALL OTHERS//
+                                AllOthers(isForModif.IDCV);
+                                AllValue();
                             }
 
-                            //Landlinephone//
-                            var landPhone = textLandlinePhone.Text;
-
-                            //Email2//
-                            var email2 = textMail2.Text;
-
-                            //SKYPE//
-                            var skype = textSkype.Text;
-
-                            //DailyFees//
-                            var dailyFee = textDailyFees.Text;
-
-                            //DateIntefview//
-                            DateTime interview = new DateTime();
-                            if (!String.IsNullOrEmpty(textdateInterview.Text))
-                                interview = DateTime.Parse(textdateInterview.Text).Date;
-                            //DateTime interview = DateTime.Parse(textdateInterview.Text).Date;
-
-                            //ShortListed//
-                            var shortL = false;
-                            if (comboShortListed.Text == "YES")
+                            /////UPDATE/////
+                            else
                             {
-                                shortL = true;
-                            }
+                                var isForModif = soft.CV_CVBASE.Where(a => a.LastName == comboName.Text).FirstOrDefault();
 
-                            //JUNSEN//
-                            var junsen = 0;
-                            if (!String.IsNullOrEmpty(comboJunSenior.Text))
-                            {
-                                if (soft.CV_JUNSENIOR.Where(a => a.JunSenior == comboJunSenior.Text).Count() != 0)
-                                {
-                                    junsen = soft.CV_JUNSENIOR.Where(a => a.JunSenior == comboJunSenior.Text).FirstOrDefault().IDJunSenior;
-                                }
-                            }
+                                isForModif.Sleep = sleep;
+                                isForModif.SleepComments = sleepCom;
+                                isForModif.Title = title;
+                                isForModif.FirstName = firstName;
+                                isForModif.IDGender = gender;
+                                isForModif.Adress1 = adress1;
+                                isForModif.Adress2 = adress2;
+                                isForModif.Adress3 = adress3;
+                                isForModif.ZipCode = zipCode;
+                                isForModif.IDNationality = nationality;
+                                isForModif.IDTOWN = twn;
+                                isForModif.IDCat = cat;
+                                isForModif.IDCountry = country;
+                                isForModif.MobilPhone = mobil;
+                                isForModif.MobilPhone2 = mobil2;
+                                isForModif.LandlinePhone = landPhone;
+                                isForModif.Email1 = email1;
+                                isForModif.Email2 = email2;
+                                isForModif.IDPersRef = persTPH;
+                                isForModif.ExpDailyFees = dailyFee;
+                                isForModif.ShortListed = shortL;
+                                isForModif.IDJunSenior = junsen;
+                                isForModif.Comments = commentaire;
+                                //isForModif.WHY = why;
+                                isForModif.GivenAge = givenAge;
+                                isForModif.Skype = skype;
 
-                            //Commentaire//
-                            var commentaire = textComCV.Text;
-                            DialogResult result = new DialogResult();
-                            //Commentaire//
-                            //var why = textWhy.Text;
-                            if (!yellowfields)
-                            {
-                                result = MessageBox.Show(mssgyellow, "CVBASE", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
-                            }
-                            
-                            if (result==DialogResult.OK || yellowfields==true)
-                            {
-                                /////INSERTION/////
-                                if (soft.CV_CVBASE.Where(a => a.LastName == comboName.Text).Count() == 0)
-                                {
-                                    var cv = new CV_CVBASE
-                                    {
-                                        Sleep = sleep,
-                                        SleepComments = sleepCom,
-                                        Title = title,
-                                        LastName = lastName,
-                                        FirstName = firstName,
-                                        IDGender = gender,
-                                        Adress1 = adress1,
-                                        Adress2 = adress2,
-                                        Adress3 = adress3,
-                                        ZipCode = zipCode,
-                                        IDNationality = nationality,
-                                        IDTOWN = twn,
-                                        IDCat = cat,
-                                        IDCountry = country,
-                                        MobilPhone = mobil,
-                                        MobilPhone2 = mobil2,
-                                        LandlinePhone = landPhone,
-                                        Email1 = email1,
-                                        Email2 = email2,
-                                        IDPersRef = persTPH,
-                                        ExpDailyFees = dailyFee,
-                                        ShortListed = shortL,
-                                        IDJunSenior = junsen,
-                                        Comments = commentaire,
-                                        GivenAge = givenAge,
-                                        DateSave = DateTime.Now.Date,
-                                        WEB = false,
-                                        Skype = skype
-                                        //WHY = why
-                                    };
-                                    soft.CV_CVBASE.Add(cv);
-                                    soft.SaveChanges();
-
-                                    var isForModif = soft.CV_CVBASE.Where(a => a.LastName == comboName.Text).FirstOrDefault();
-                                    //Update ALL DATE//
-                                    if (!String.IsNullOrEmpty(textdateCV.Text))
-                                        isForModif.DateCV = datecv;
-                                    if (!String.IsNullOrEmpty(textdateBirthDay.Text))
-                                        isForModif.BirthDay = birtDay;
-                                    if (!String.IsNullOrEmpty(textdateInterview.Text))
-                                        isForModif.DateSPMU = interview;
-
-                                    soft.SaveChanges();
-
-                                    //Insert ALL OTHERS//
-                                    AllOthers(isForModif.IDCV);
-                                    AllValue();
-                                }
-
-                                /////UPDATE/////
+                                //Update ALL DATE//
+                                if (!String.IsNullOrEmpty(textdateCV.Text))
+                                    isForModif.DateCV = datecv;
                                 else
+                                    isForModif.DateCV = null;
+                                if (!String.IsNullOrEmpty(textdateBirthDay.Text))
+                                    isForModif.BirthDay = birtDay;
+                                else
+                                    isForModif.BirthDay = null;
+                                if (!String.IsNullOrEmpty(textdateInterview.Text))
+                                    isForModif.DateSPMU = interview;
+                                else
+                                    isForModif.DateSPMU = null;
+
+                                soft.SaveChanges();
+
+                                //Delete ALL OTHERS//
+                                //DOC//
+                                if (soft.CV_DOC.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
                                 {
-                                    var isForModif = soft.CV_CVBASE.Where(a => a.LastName == comboName.Text).FirstOrDefault();
-
-                                    isForModif.Sleep = sleep;
-                                    isForModif.SleepComments = sleepCom;
-                                    isForModif.Title = title;
-                                    isForModif.FirstName = firstName;
-                                    isForModif.IDGender = gender;
-                                    isForModif.Adress1 = adress1;
-                                    isForModif.Adress2 = adress2;
-                                    isForModif.Adress3 = adress3;
-                                    isForModif.ZipCode = zipCode;
-                                    isForModif.IDNationality = nationality;
-                                    isForModif.IDTOWN = twn;
-                                    isForModif.IDCat = cat;
-                                    isForModif.IDCountry = country;
-                                    isForModif.MobilPhone = mobil;
-                                    isForModif.MobilPhone2 = mobil2;
-                                    isForModif.LandlinePhone = landPhone;
-                                    isForModif.Email1 = email1;
-                                    isForModif.Email2 = email2;
-                                    isForModif.IDPersRef = persTPH;
-                                    isForModif.ExpDailyFees = dailyFee;
-                                    isForModif.ShortListed = shortL;
-                                    isForModif.IDJunSenior = junsen;
-                                    isForModif.Comments = commentaire;
-                                    //isForModif.WHY = why;
-                                    isForModif.GivenAge = givenAge;
-                                    isForModif.Skype = skype;
-
-                                    //Update ALL DATE//
-                                    if (!String.IsNullOrEmpty(textdateCV.Text))
-                                        isForModif.DateCV = datecv;
-                                    else
-                                        isForModif.DateCV = null;
-                                    if (!String.IsNullOrEmpty(textdateBirthDay.Text))
-                                        isForModif.BirthDay = birtDay;
-                                    else
-                                        isForModif.BirthDay = null;
-                                    if (!String.IsNullOrEmpty(textdateInterview.Text))
-                                        isForModif.DateSPMU = interview;
-                                    else
-                                        isForModif.DateSPMU = null;
-
-                                    soft.SaveChanges();
-
-                                    //Delete ALL OTHERS//
-                                    //DOC//
-                                    if (soft.CV_DOC.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                    foreach (var x in soft.CV_DOC.Where(a => a.IDCV == isForModif.IDCV).ToList())
                                     {
-                                        foreach (var x in soft.CV_DOC.Where(a => a.IDCV == isForModif.IDCV).ToList())
-                                        {
-                                            //var docForDelete = soft.CV_DOC.Where(a => a.IDCV == x.IDCV).FirstOrDefault();
-                                            soft.CV_DOC.Remove(x);
-                                            soft.SaveChanges();
-                                        }
-                                    }
-
-                                    //DOCDATECOM//
-                                    if (soft.CV_DOCDATECOMM.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
-                                    {
-                                        foreach (var x in soft.CV_DOCDATECOMM.Where(a => a.IDCV == isForModif.IDCV).ToList())
-                                        {
-                                            soft.CV_DOCDATECOMM.Remove(x);
-                                            soft.SaveChanges();
-                                        }
-
-                                    }
-
-                                    //EDUC//
-                                    if (soft.CV_EDUC.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
-                                    {
-                                        foreach (var x in soft.CV_EDUC.Where(a => a.IDCV == isForModif.IDCV).ToList())
-                                        {
-                                            soft.CV_EDUC.Remove(x);
-                                            soft.SaveChanges();
-                                        }
-                                    }
-
-                                    //GRAD//
-                                    if (soft.CV_GRAD.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
-                                    {
-                                        foreach (var x in soft.CV_GRAD.Where(a => a.IDCV == isForModif.IDCV).ToList())
-                                        {
-                                            soft.CV_GRAD.Remove(x);
-                                            soft.SaveChanges();
-                                        }
-                                    }
-
-                                    //LANGUAGE//
-                                    if (soft.CV_WRSP.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
-                                    {
-                                        foreach (var x in soft.CV_WRSP.Where(a => a.IDCV == isForModif.IDCV).ToList())
-                                        {
-                                            soft.CV_WRSP.Remove(x);
-                                            soft.SaveChanges();
-                                        }
-                                    }
-
-                                    //INTLEXPTECH//
-                                    if (soft.CV_INTLEXPTECH.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
-                                    {
-                                        foreach (var x in soft.CV_INTLEXPTECH.Where(a => a.IDCV == isForModif.IDCV).ToList())
-                                        {
-                                            soft.CV_INTLEXPTECH.Remove(x);
-                                            soft.SaveChanges();
-                                        }
-                                    }
-
-                                    //INTLREGEXP//
-                                    if (soft.CV_INTLREGEXP.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
-                                    {
-                                        foreach (var x in soft.CV_INTLREGEXP.Where(a => a.IDCV == isForModif.IDCV).ToList())
-                                        {
-                                            soft.CV_INTLREGEXP.Remove(x);
-                                            soft.SaveChanges();
-                                        }
-                                    }
-
-                                    //INTLCOMMENTS//
-                                    if (soft.CV_INTLCOMMENT.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
-                                    {
-                                        foreach (var x in soft.CV_INTLCOMMENT.Where(a => a.IDCV == isForModif.IDCV).ToList())
-                                        {
-                                            soft.CV_INTLCOMMENT.Remove(x);
-                                            soft.SaveChanges();
-                                        }
-                                    }
-
-                                    //NOTECRITERIA//
-                                    if (soft.CV_NOTECRITERIA.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
-                                    {
-                                        foreach (var x in soft.CV_NOTECRITERIA.Where(a => a.IDCV == isForModif.IDCV).ToList())
-                                        {
-                                            soft.CV_NOTECRITERIA.Remove(x);
-                                            soft.SaveChanges();
-                                        }
-                                    }
-
-                                    //EXPSWTPH//
-                                    if (soft.CV_EXPSWTPH.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
-                                    {
-                                        foreach (var x in soft.CV_EXPSWTPH.Where(a => a.IDCV == isForModif.IDCV).ToList())
-                                        {
-                                            soft.CV_EXPSWTPH.Remove(x);
-                                            soft.SaveChanges();
-                                        }
-                                    }
-
-                                    //EXPCOMMENT//
-                                    if (soft.CV_EXPCOMMENT.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
-                                    {
-                                        var ExpForDelete = soft.CV_EXPCOMMENT.Where(a => a.IDCV == isForModif.IDCV).FirstOrDefault();
-                                        soft.CV_EXPCOMMENT.Remove(ExpForDelete);
+                                        //var docForDelete = soft.CV_DOC.Where(a => a.IDCV == x.IDCV).FirstOrDefault();
+                                        soft.CV_DOC.Remove(x);
                                         soft.SaveChanges();
                                     }
-
-                                    //VISITPMU//
-                                    if (soft.CV_VISITSPMU.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
-                                    {
-                                        var VisitForDelete = soft.CV_VISITSPMU.Where(a => a.IDCV == isForModif.IDCV).FirstOrDefault();
-                                        soft.CV_VISITSPMU.Remove(VisitForDelete);
-                                        soft.SaveChanges();
-                                    }
-
-                                    //Eprofil//
-                                    if (soft.CV_EPRO.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
-                                    {
-                                        var epForDelete = soft.CV_EPRO.Where(a => a.IDCV == isForModif.IDCV).FirstOrDefault();
-                                        soft.CV_EPRO.Remove(epForDelete);
-                                        soft.SaveChanges();
-                                    }
-
-                                    //Eprofil Web link//
-                                    if (soft.CV_EPROWL.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
-                                    {
-                                        var epwForDelete = soft.CV_EPROWL.Where(a => a.IDCV == isForModif.IDCV).FirstOrDefault();
-                                        soft.CV_EPROWL.Remove(epwForDelete);
-                                        soft.SaveChanges();
-                                    }
-
-                                    //ON chat//
-                                    if (soft.CV_ONCHAT.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
-                                    {
-                                        var onchatForDelete = soft.CV_ONCHAT.Where(a => a.IDCV == isForModif.IDCV).FirstOrDefault();
-                                        soft.CV_ONCHAT.Remove(onchatForDelete);
-                                        soft.SaveChanges();
-                                    }
-
-                                    //ON chat avatar//
-                                    if (soft.CV_ONCHATAVA.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
-                                    {
-                                        var onchatavaForDelete = soft.CV_ONCHATAVA.Where(a => a.IDCV == isForModif.IDCV).FirstOrDefault();
-                                        soft.CV_ONCHATAVA.Remove(onchatavaForDelete);
-                                        soft.SaveChanges();
-                                    }
-
-                                    //Insert ALL OTHERS//
-                                    AllOthers(isForModif.IDCV);
-                                    AllValue();
                                 }
-                             MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                                //DOCDATECOM//
+                                if (soft.CV_DOCDATECOMM.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                {
+                                    foreach (var x in soft.CV_DOCDATECOMM.Where(a => a.IDCV == isForModif.IDCV).ToList())
+                                    {
+                                        soft.CV_DOCDATECOMM.Remove(x);
+                                        soft.SaveChanges();
+                                    }
+
+                                }
+
+                                //EDUC//
+                                if (soft.CV_EDUC.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                {
+                                    foreach (var x in soft.CV_EDUC.Where(a => a.IDCV == isForModif.IDCV).ToList())
+                                    {
+                                        soft.CV_EDUC.Remove(x);
+                                        soft.SaveChanges();
+                                    }
+                                }
+
+                                //GRAD//
+                                if (soft.CV_GRAD.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                {
+                                    foreach (var x in soft.CV_GRAD.Where(a => a.IDCV == isForModif.IDCV).ToList())
+                                    {
+                                        soft.CV_GRAD.Remove(x);
+                                        soft.SaveChanges();
+                                    }
+                                }
+
+                                //LANGUAGE//
+                                if (soft.CV_WRSP.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                {
+                                    foreach (var x in soft.CV_WRSP.Where(a => a.IDCV == isForModif.IDCV).ToList())
+                                    {
+                                        soft.CV_WRSP.Remove(x);
+                                        soft.SaveChanges();
+                                    }
+                                }
+
+                                //INTLEXPTECH//
+                                if (soft.CV_INTLEXPTECH.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                {
+                                    foreach (var x in soft.CV_INTLEXPTECH.Where(a => a.IDCV == isForModif.IDCV).ToList())
+                                    {
+                                        soft.CV_INTLEXPTECH.Remove(x);
+                                        soft.SaveChanges();
+                                    }
+                                }
+
+                                //INTLREGEXP//
+                                if (soft.CV_INTLREGEXP.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                {
+                                    foreach (var x in soft.CV_INTLREGEXP.Where(a => a.IDCV == isForModif.IDCV).ToList())
+                                    {
+                                        soft.CV_INTLREGEXP.Remove(x);
+                                        soft.SaveChanges();
+                                    }
+                                }
+
+                                //INTLCOMMENTS//
+                                if (soft.CV_INTLCOMMENT.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                {
+                                    foreach (var x in soft.CV_INTLCOMMENT.Where(a => a.IDCV == isForModif.IDCV).ToList())
+                                    {
+                                        soft.CV_INTLCOMMENT.Remove(x);
+                                        soft.SaveChanges();
+                                    }
+                                }
+
+                                //NOTECRITERIA//
+                                if (soft.CV_NOTECRITERIA.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                {
+                                    foreach (var x in soft.CV_NOTECRITERIA.Where(a => a.IDCV == isForModif.IDCV).ToList())
+                                    {
+                                        soft.CV_NOTECRITERIA.Remove(x);
+                                        soft.SaveChanges();
+                                    }
+                                }
+
+                                //EXPSWTPH//
+                                if (soft.CV_EXPSWTPH.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                {
+                                    foreach (var x in soft.CV_EXPSWTPH.Where(a => a.IDCV == isForModif.IDCV).ToList())
+                                    {
+                                        soft.CV_EXPSWTPH.Remove(x);
+                                        soft.SaveChanges();
+                                    }
+                                }
+
+                                //EXPCOMMENT//
+                                if (soft.CV_EXPCOMMENT.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                {
+                                    var ExpForDelete = soft.CV_EXPCOMMENT.Where(a => a.IDCV == isForModif.IDCV).FirstOrDefault();
+                                    soft.CV_EXPCOMMENT.Remove(ExpForDelete);
+                                    soft.SaveChanges();
+                                }
+
+                                //VISITPMU//
+                                if (soft.CV_VISITSPMU.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                {
+                                    var VisitForDelete = soft.CV_VISITSPMU.Where(a => a.IDCV == isForModif.IDCV).FirstOrDefault();
+                                    soft.CV_VISITSPMU.Remove(VisitForDelete);
+                                    soft.SaveChanges();
+                                }
+
+                                //Eprofil//
+                                if (soft.CV_EPRO.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                {
+                                    var epForDelete = soft.CV_EPRO.Where(a => a.IDCV == isForModif.IDCV).FirstOrDefault();
+                                    soft.CV_EPRO.Remove(epForDelete);
+                                    soft.SaveChanges();
+                                }
+
+                                //Eprofil Web link//
+                                if (soft.CV_EPROWL.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                {
+                                    var epwForDelete = soft.CV_EPROWL.Where(a => a.IDCV == isForModif.IDCV).FirstOrDefault();
+                                    soft.CV_EPROWL.Remove(epwForDelete);
+                                    soft.SaveChanges();
+                                }
+
+                                //ON chat//
+                                if (soft.CV_ONCHAT.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                {
+                                    var onchatForDelete = soft.CV_ONCHAT.Where(a => a.IDCV == isForModif.IDCV).FirstOrDefault();
+                                    soft.CV_ONCHAT.Remove(onchatForDelete);
+                                    soft.SaveChanges();
+                                }
+
+                                //ON chat avatar//
+                                if (soft.CV_ONCHATAVA.Where(a => a.IDCV == isForModif.IDCV).Count() != 0)
+                                {
+                                    var onchatavaForDelete = soft.CV_ONCHATAVA.Where(a => a.IDCV == isForModif.IDCV).FirstOrDefault();
+                                    soft.CV_ONCHATAVA.Remove(onchatavaForDelete);
+                                    soft.SaveChanges();
+                                }
+
+                                //Insert ALL OTHERS//
+                                AllOthers(isForModif.IDCV);
+                                AllValue();
+                            }
+
+                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                             previousToolStripMenuItem.Enabled = true;
                             nextToolStripMenuItem.Enabled = true;
                         }
-                     /*       if (yellowfields == false)
-                            {
-                                MessageBox.Show(mssgyellow, "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            }
-                        */
-                   
-                            //LastName//
-                            List<String> itmName = new List<String>();
-                            itmName.Add("");
-                            int isco = Token.getisCO();
-                            var iscoJun = soft.CV_DATASET.Where(a => a.ID_USERS == isco).FirstOrDefault().DATASETCV;
-                            var idJunSen = soft.CV_JUNSENIOR.Where(a => a.JunSenior == iscoJun).FirstOrDefault().IDJunSenior;
+                        /*       if (yellowfields == false)
+                               {
+                                   MessageBox.Show(mssgyellow, "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                               }
+                               else
+                               {
+                                   MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                               }
+                           */
 
-                            if (soft.CV_JUNSENIOR.Where(a => a.IDJunSenior == idJunSen).FirstOrDefault().JunSenior == "ALL")
-                            {
-                                if (soft.CV_CVBASE.Count() != 0)
-                                {
-                                    foreach (var x in soft.CV_CVBASE.Select(a => a.LastName).OrderBy(a => a).ToList())
-                                    {
-                                        itmName.Add(x);
-                                    }
-                                }
-                                comboName.DataSource = itmName;
-                                comboName.SelectedItem = lastName;
-                            }
-                            else
-                            {
-                                var isForDataSet = soft.CV_JUNSENIOR.Where(a => a.IDJunSenior == idJunSen).FirstOrDefault().JunSenior;
-                                foreach (var x in soft.CV_JUNSENIOR.Where(a => a.JunSenior.ToUpper().Contains(isForDataSet.ToUpper())).ToList())
-                                {
-                                    foreach (var y in soft.CV_CVBASE.Where(a => a.IDJunSenior == x.IDJunSenior).Select(a => a.LastName).OrderBy(a => a).ToList())
-                                    {
-                                        itmName.Add(y);
-                                    }
-                                }
-                                comboName.DataSource = itmName;
-                                comboName.SelectedItem = lastName;
+                        //LastName//
+                        List<String> itmName = new List<String>();
+                        itmName.Add("");
+                        int isco = Token.getisCO();
+                        var iscoJun = soft.CV_DATASET.Where(a => a.ID_USERS == isco).FirstOrDefault().DATASETCV;
+                        var idJunSen = soft.CV_JUNSENIOR.Where(a => a.JunSenior == iscoJun).FirstOrDefault().IDJunSenior;
 
-                                if (!comboJunSenior.Text.ToUpper().Contains(isForDataSet.ToUpper()))
+                        if (soft.CV_JUNSENIOR.Where(a => a.IDJunSenior == idJunSen).FirstOrDefault().JunSenior == "ALL")
+                        {
+                            if (soft.CV_CVBASE.Count() != 0)
+                            {
+                                foreach (var x in soft.CV_CVBASE.Select(a => a.LastName).OrderBy(a => a).ToList())
                                 {
-                                    comboName.Focus();
-                                    comboName.Text = null;
-                                    checkNoteGlobal.Checked = false;
-                                    InitialCVNEW();
-                                    comboName.SelectedItem = "";
+                                    itmName.Add(x);
                                 }
                             }
+                            comboName.DataSource = itmName;
+                            comboName.SelectedItem = lastName;
                         }
                         else
-                            MessageBox.Show(mssg, "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        {
+                            var isForDataSet = soft.CV_JUNSENIOR.Where(a => a.IDJunSenior == idJunSen).FirstOrDefault().JunSenior;
+                            foreach (var x in soft.CV_JUNSENIOR.Where(a => a.JunSenior.ToUpper().Contains(isForDataSet.ToUpper())).ToList())
+                            {
+                                foreach (var y in soft.CV_CVBASE.Where(a => a.IDJunSenior == x.IDJunSenior).Select(a => a.LastName).OrderBy(a => a).ToList())
+                                {
+                                    itmName.Add(y);
+                                }
+                            }
+                            comboName.DataSource = itmName;
+                            comboName.SelectedItem = lastName;
+
+                            if (!comboJunSenior.Text.ToUpper().Contains(isForDataSet.ToUpper()))
+                            {
+                                comboName.Focus();
+                                comboName.Text = null;
+                                checkNoteGlobal.Checked = false;
+                                InitialCVNEW();
+                                comboName.SelectedItem = "";
+                            }
+                        }
+                    }
+                    else
+                        MessageBox.Show(mssg, "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
@@ -3121,8 +3123,6 @@ namespace CVBASESWISS
                 }
              
              //   var years = int.Parse(textDiplY1.Text);
-              
-            
 
                 //2//
                 if (!String.IsNullOrEmpty(comboDipl2.Text))
@@ -7488,7 +7488,8 @@ namespace CVBASESWISS
             }
            
         }
-        public void checkupdate (){
+        public void checkupdate ()
+        {
             var tbox = Controls.OfType<TextBox>().ToDictionary(x => x.Name, x => x.Text);
             var combo = Controls.OfType<ComboBox>().ToDictionary(x => x.Name, x => x.Text);
             var check = Controls.OfType<CheckBox>().ToDictionary(x => x.Name, x => x.CheckState);
@@ -7504,7 +7505,6 @@ namespace CVBASESWISS
                         {
                             if (cc is TextBox)
                             {
-
                                 if (!tbox1.ContainsKey(cc.Name)) tbox1.Add(cc.Name, cc.Text);
                             }
                             if (cc is ComboBox)
@@ -7517,26 +7517,33 @@ namespace CVBASESWISS
                 }
             }
 
+            tbox.Add(textExpSWISSComm.Name, textExpSWISSComm.Text);
+
+            //tbox.Add(;
             foreach (var item in tbox)
             {
                 if (AllTextBox.ContainsKey(item.Key) && item.Value != AllTextBox[item.Key])
                 {
-                    if (item.Key != "textAgeCalc" || item.Key != "textDateCreate")
+                    if (item.Key != "textAgeCalc" || item.Key != "textDateCreate" || item.Key != "textExpSWISSComm")
                     {
                         updated = true;
                      //   AllTextBox[item.Key] = tbox[item.Key];
                     }
                 }
             }
+
             foreach (var item in combo)
             {
                 if (AllComboBox.ContainsKey(item.Key) && item.Value != AllComboBox[item.Key])
                 {
                     if (item.Key != "comboName")
-                    updated = true;
+                    { 
+                        updated = true; 
+                    }
                 //    AllComboBox[item.Key] = combo[item.Key];
                 }
             }
+
             foreach (var item in check)
             {
                 if ((item.Key == "checkSleep"))
@@ -7558,6 +7565,7 @@ namespace CVBASESWISS
                   //  AllTextBox1[item.Key] = tbox1[item.Key];
                 }
             }
+
             foreach (var item in combo1)
             {
                 if (AllComboBox1.ContainsKey(item.Key) && item.Value != AllComboBox1[item.Key])
@@ -7566,8 +7574,7 @@ namespace CVBASESWISS
                   //  AllComboBox1[item.Key] = combo1[item.Key];
                 }
             }
-     
-         }
+        }
         private void Frm_cvadd_FormClosed(object sender,FormClosedEventArgs e)
         {
            
@@ -7589,9 +7596,6 @@ namespace CVBASESWISS
                 }
           
             }
-          
-               
-           
         }
 
         private void previousToolStripMenuItem_Click(object sender, EventArgs e)
@@ -11965,8 +11969,6 @@ namespace CVBASESWISS
         bool testLoad = false;
         private void Frm_cvadd_Load(object sender, EventArgs e)
         {
-            
-          
             AllValue();
             if(isnew)
             EnableFalseCV();
