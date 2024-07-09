@@ -43,26 +43,23 @@ namespace CVBASESWISS
                 table.Columns.Add("Is Admin");
 
                 table.Rows.Clear();
-            
-               
-                    if (soft.CV_USERS.Count() != 0)
+
+
+                if (soft.CV_USERS.Count() != 0)
+                {
+                    foreach (var x in soft.CV_USERS.OrderBy(a => a.LOGIN).ToList())
                     {
-                        foreach (var x in soft.CV_USERS.OrderBy(a => a.LOGIN).ToList())
-                        {
-                            var roleUser = "Not authorised";
-                            if (x.AUTH == 1)
-                                roleUser = "Authorised";
+                        var roleUser = "Not authorised";
+                        if (x.AUTH == 1)
+                            roleUser = "Authorised";
 
-                            var isA = "NO";
-                            if (x.ISADMIN == 1)
-                                isA = "YES";
+                        var isA = "NO";
+                        if (x.ISADMIN == 1)
+                            isA = "YES";
 
-                            table.Rows.Add(x.ID_USERS, x.LOGIN, Cipher.Decrypt(x.PASSWORD, "CVBASE2022softrfr_rr"), roleUser, isA);
-                        }
+                        table.Rows.Add(x.ID_USERS, x.LOGIN, Cipher.Decrypt(x.PASSWORD, "CVBASE2022softrfr_rr"), roleUser, isA);
                     }
-                
-              
-             
+                }
 
                 gridliste.DataSource = table;
 
@@ -102,7 +99,14 @@ namespace CVBASESWISS
                         soft.CV_USERS.Add(newUser);
                         soft.SaveChanges();
 
-                        MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                        var w = new Form() { Size = new Size(0, 0) };
+                        Task.Delay(TimeSpan.FromSeconds(1.5))
+                            .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                        //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
 
                         remplir();
                     }
@@ -149,9 +153,13 @@ namespace CVBASESWISS
 
                         soft.SaveChanges();
 
-                   
-                     
-                        MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        var w = new Form() { Size = new Size(0, 0) };
+                        Task.Delay(TimeSpan.FromSeconds(1.5))
+                            .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                        //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
 
                         remplir();
                     }
@@ -212,7 +220,12 @@ namespace CVBASESWISS
                             soft.CV_USERS.Remove(forDelete);
                             soft.SaveChanges();
 
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                             remplir();
                         }

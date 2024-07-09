@@ -51,7 +51,14 @@ namespace CVBASESWISS
                 soft.SaveChanges();
                 dsParameter.PowerForm = dsParameter.GetPowerFormId(txt_powerform.Text);
                 MessageBox.Show(dsParameter.PowerForm);
-                System.Windows.Forms.MessageBox.Show("successfully saved", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                var w = new Form() { Size = new Size(0, 0) };
+                Task.Delay(TimeSpan.FromSeconds(1.5))
+                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                 this.Dispose();
             }catch(Exception ex)
             {

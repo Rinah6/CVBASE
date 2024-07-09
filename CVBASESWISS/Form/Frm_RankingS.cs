@@ -172,7 +172,14 @@ namespace CVBASESWISS
                     c1 = V1p.Text;
                     c2 = V2p.Text;
                     c3 = V3p.Text;
-                    MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    var w = new Form() { Size = new Size(0, 0) };
+                    Task.Delay(TimeSpan.FromSeconds(1.5))
+                        .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                    //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
 
                     this.Dispose();
                 }
@@ -221,10 +228,7 @@ namespace CVBASESWISS
                     {
                         MessageBox.Show("Please change value to obtain score!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
                          e.Cancel = true;
-                
                     }
-                   
-                  
                 }
             }
         }

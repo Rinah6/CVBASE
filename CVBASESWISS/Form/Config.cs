@@ -72,7 +72,15 @@ namespace CVBASESWISS
 
             var encText = Cipher.Encrypt(connectionString, key);
             System.IO.File.WriteAllText(P_Directory.file, encText);
-            MessageBox.Show("Your connection string has been successfully saved.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            var w = new Form() { Size = new Size(0, 0) };
+            Task.Delay(TimeSpan.FromSeconds(1.5))
+                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show(w, "Your connection string has been successfully saved", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
             this.Dispose();
             //try
             //{

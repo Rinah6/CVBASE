@@ -1186,10 +1186,17 @@ namespace CVBASESWISS
                                 soft.SaveChanges();
                             }
 
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
 
                             //LastName//
-                        List<String> itmName = new List<String>();
+                            List<String> itmName = new List<String>();
                         itmName.Add("");
                         int isco = Token.getisCO();
                         var iscoJun = soft.CV_DATASET.Where(a => a.ID_USERS == isco).FirstOrDefault().DATASETCV;
@@ -2319,135 +2326,133 @@ namespace CVBASESWISS
 
         public void InsertOrUpdateCV()
         {
-           
-                try
+            try
+            {
+                DbCVBASE soft = new DbCVBASE();
+                string mssg = "Please fill all informations : " + "\n\n";
+                string mssgyellow = "";
+                CANSAVE = true;
+                yellowfield();
+
+                /*     if (!String.IsNullOrEmpty(comboName.Text) && !String.IsNullOrEmpty(textPrenom.Text) && !String.IsNullOrEmpty(comboGender.Text) &&
+                          !String.IsNullOrEmpty(comboNationality.Text) && !String.IsNullOrEmpty(comboCat.Text) && !String.IsNullOrEmpty(comboJunSenior.Text) &&
+                          !String.IsNullOrEmpty(comboDipl1.Text) && !String.IsNullOrEmpty(comboSpecDipl1.Text) && !String.IsNullOrEmpty(comboDiplP1.Text) &&
+                          !String.IsNullOrEmpty(comboLang1.Text) &&
+                          !String.IsNullOrEmpty(comboTechField1.Text) && !String.IsNullOrEmpty(comboRegion1.Text) &&
+                          !String.IsNullOrEmpty(comboTitle.Text))*/
+                if (!String.IsNullOrEmpty(comboName.Text) && !String.IsNullOrEmpty(textPrenom.Text) && !String.IsNullOrEmpty(comboGender.Text) &&
+                   !String.IsNullOrEmpty(comboNationality.Text) && !String.IsNullOrEmpty(comboCat.Text) && !String.IsNullOrEmpty(comboJunSenior.Text) &&
+                   !String.IsNullOrEmpty(comboTitle.Text) && !String.IsNullOrEmpty(textdateCV.Text))
                 {
-                    DbCVBASE soft = new DbCVBASE();
-                    string mssg = "Please fill all informations : " + "\n\n";
-                    string mssgyellow = "";
-                    CANSAVE = true;
-                    yellowfield();
-              
-              /*     if (!String.IsNullOrEmpty(comboName.Text) && !String.IsNullOrEmpty(textPrenom.Text) && !String.IsNullOrEmpty(comboGender.Text) &&
-                        !String.IsNullOrEmpty(comboNationality.Text) && !String.IsNullOrEmpty(comboCat.Text) && !String.IsNullOrEmpty(comboJunSenior.Text) &&
-                        !String.IsNullOrEmpty(comboDipl1.Text) && !String.IsNullOrEmpty(comboSpecDipl1.Text) && !String.IsNullOrEmpty(comboDiplP1.Text) &&
-                        !String.IsNullOrEmpty(comboLang1.Text) &&
-                        !String.IsNullOrEmpty(comboTechField1.Text) && !String.IsNullOrEmpty(comboRegion1.Text) &&
-                        !String.IsNullOrEmpty(comboTitle.Text))*/
-                    if (!String.IsNullOrEmpty(comboName.Text) && !String.IsNullOrEmpty(textPrenom.Text) && !String.IsNullOrEmpty(comboGender.Text) &&
-                       !String.IsNullOrEmpty(comboNationality.Text) && !String.IsNullOrEmpty(comboCat.Text) && !String.IsNullOrEmpty(comboJunSenior.Text) && 
-                       !String.IsNullOrEmpty(comboTitle.Text) && !String.IsNullOrEmpty(textdateCV.Text))
+                    //   string mssg = "Please fill all informations : " + "\n\n";
+                    //  string mssgyellow = "";
+                    //TEST//
+                    //DOC//
+                    if ((!String.IsNullOrEmpty(comboDoc1.Text) && String.IsNullOrEmpty(textDocLink1.Text))
+                        || (String.IsNullOrEmpty(comboDoc1.Text) && !String.IsNullOrEmpty(textDocLink1.Text)))
                     {
-                     //   string mssg = "Please fill all informations : " + "\n\n";
-                      //  string mssgyellow = "";
-                        //TEST//
-                        //DOC//
-                        if ((!String.IsNullOrEmpty(comboDoc1.Text) && String.IsNullOrEmpty(textDocLink1.Text))
-                            || (String.IsNullOrEmpty(comboDoc1.Text) && !String.IsNullOrEmpty(textDocLink1.Text)))
-                        {
-                            CANSAVE = false;
-                            mssg += "Doc1 or LinkDoc1" + "\n";
-                        }
-                        if ((!String.IsNullOrEmpty(comboDoc2.Text) && String.IsNullOrEmpty(textDocLink2.Text))
-                            || (String.IsNullOrEmpty(comboDoc2.Text) && !String.IsNullOrEmpty(textDocLink2.Text)))
-                        {
-                            CANSAVE = false;
-                            mssg += "Doc2 or LinkDoc2" + "\n";
-                        }
-                        if ((!String.IsNullOrEmpty(comboDoc3.Text) && String.IsNullOrEmpty(textDocLink3.Text))
-                            || (String.IsNullOrEmpty(comboDoc3.Text) && !String.IsNullOrEmpty(textDocLink3.Text)))
-                        {
-                            CANSAVE = false;
-                            mssg += "Doc3 or LinkDoc3" + "\n";
-                        }
-                        if ((!String.IsNullOrEmpty(comboDoc4.Text) && String.IsNullOrEmpty(textDocLink4.Text))
-                            || (String.IsNullOrEmpty(comboDoc4.Text) && !String.IsNullOrEmpty(textDocLink4.Text)))
-                        {
-                            CANSAVE = false;
-                            mssg += "Doc4 or LinkDoc4" + "\n";
-                        }
-                        if ((!String.IsNullOrEmpty(comboDoc5.Text) && String.IsNullOrEmpty(textDocLink5.Text))
-                            || (String.IsNullOrEmpty(comboDoc5.Text) && !String.IsNullOrEmpty(textDocLink5.Text)))
-                        {
-                            CANSAVE = false;
-                            mssg += "Doc5 or LinkDoc5" + "\n";
-                        }
-                        //EDUCATION//
-                        if ((!String.IsNullOrEmpty(comboDipl1.Text) && String.IsNullOrEmpty(comboSpecDipl1.Text) && String.IsNullOrEmpty(comboDiplP1.Text))
-                            || (String.IsNullOrEmpty(comboDipl1.Text) && !String.IsNullOrEmpty(comboSpecDipl1.Text) && String.IsNullOrEmpty(comboDiplP1.Text))
-                            || (String.IsNullOrEmpty(comboDipl1.Text) && String.IsNullOrEmpty(comboSpecDipl1.Text) && !String.IsNullOrEmpty(comboDiplP1.Text))
-                            || (!String.IsNullOrEmpty(comboDipl1.Text) && !String.IsNullOrEmpty(comboSpecDipl1.Text) && String.IsNullOrEmpty(comboDiplP1.Text))
-                            || (!String.IsNullOrEmpty(comboDipl1.Text) && String.IsNullOrEmpty(comboSpecDipl1.Text) && !String.IsNullOrEmpty(comboDiplP1.Text))
-                            || (String.IsNullOrEmpty(comboDipl1.Text) && !String.IsNullOrEmpty(comboSpecDipl1.Text) && !String.IsNullOrEmpty(comboDiplP1.Text)))
-                        {
-                            CANSAVE = false;
-                            mssg += "Diploma1 or Speciality1 or Place1" + "\n";
-                        }
-                        if ((!String.IsNullOrEmpty(comboDipl2.Text) && String.IsNullOrEmpty(comboSpecDipl2.Text) && String.IsNullOrEmpty(comboDiplP2.Text))
-                            || (String.IsNullOrEmpty(comboDipl2.Text) && !String.IsNullOrEmpty(comboSpecDipl2.Text) && String.IsNullOrEmpty(comboDiplP2.Text))
-                            || (String.IsNullOrEmpty(comboDipl2.Text) && String.IsNullOrEmpty(comboSpecDipl2.Text) && !String.IsNullOrEmpty(comboDiplP2.Text))
-                            || (!String.IsNullOrEmpty(comboDipl2.Text) && !String.IsNullOrEmpty(comboSpecDipl2.Text) && String.IsNullOrEmpty(comboDiplP2.Text))
-                            || (!String.IsNullOrEmpty(comboDipl2.Text) && String.IsNullOrEmpty(comboSpecDipl2.Text) && !String.IsNullOrEmpty(comboDiplP2.Text))
-                            || (String.IsNullOrEmpty(comboDipl2.Text) && !String.IsNullOrEmpty(comboSpecDipl2.Text) && !String.IsNullOrEmpty(comboDiplP2.Text)))
-                        {
-                            CANSAVE = false;
-                            mssg += "Diploma2 or Speciality2 or Place2" + "\n";
-                        }
-                        if ((!String.IsNullOrEmpty(comboDipl3.Text) && String.IsNullOrEmpty(comboSpecDipl3.Text) && String.IsNullOrEmpty(comboDiplP3.Text))
-                            || (String.IsNullOrEmpty(comboDipl3.Text) && !String.IsNullOrEmpty(comboSpecDipl3.Text) && String.IsNullOrEmpty(comboDiplP3.Text))
-                            || (String.IsNullOrEmpty(comboDipl3.Text) && String.IsNullOrEmpty(comboSpecDipl3.Text) && !String.IsNullOrEmpty(comboDiplP3.Text))
-                            || (!String.IsNullOrEmpty(comboDipl3.Text) && !String.IsNullOrEmpty(comboSpecDipl3.Text) && String.IsNullOrEmpty(comboDiplP3.Text))
-                            || (!String.IsNullOrEmpty(comboDipl3.Text) && String.IsNullOrEmpty(comboSpecDipl3.Text) && !String.IsNullOrEmpty(comboDiplP3.Text))
-                            || (String.IsNullOrEmpty(comboDipl3.Text) && !String.IsNullOrEmpty(comboSpecDipl3.Text) && !String.IsNullOrEmpty(comboDiplP3.Text)))
-                        {
-                            CANSAVE = false;
-                            mssg += "Diploma3 or Speciality3 or Place3" + "\n";
-                        }
-                        //POST GRADUATE//
-                        if ((!String.IsNullOrEmpty(comboPostGrad1.Text) && String.IsNullOrEmpty(comboPostGradP1.Text))
-                            || (String.IsNullOrEmpty(comboPostGrad1.Text) && !String.IsNullOrEmpty(comboPostGradP1.Text)))
-                        {
-                            CANSAVE = false;
-                            mssg += "Post Graduate Training1 or Place1" + "\n";
-                        }
-                        if ((!String.IsNullOrEmpty(comboPostGrad2.Text) && String.IsNullOrEmpty(comboPostGradP2.Text))
-                            || (String.IsNullOrEmpty(comboPostGrad2.Text) && !String.IsNullOrEmpty(comboPostGradP2.Text)))
-                        {
-                            CANSAVE = false;
-                            mssg += "Post Graduate Training2 or Place2" + "\n";
-                        }
-                        if ((!String.IsNullOrEmpty(comboPostGrad3.Text) && String.IsNullOrEmpty(comboPostGradP3.Text))
-                            || (String.IsNullOrEmpty(comboPostGrad3.Text) && !String.IsNullOrEmpty(comboPostGradP3.Text)))
-                        {
-                            CANSAVE = false;
-                            mssg += "Post Graduate Training3 or Place3" + "\n";
-                        }
-                        //eProfil//
-                        if ((!String.IsNullOrEmpty(ep1.Text) && String.IsNullOrEmpty(epl1.Text))
-                            || (String.IsNullOrEmpty(ep1.Text) && !String.IsNullOrEmpty(epl1.Text)))
-                        {
-                            CANSAVE = false;
-                            mssg += "eProfile1 or Link1" + "\n";
-                        }
-                        if ((!String.IsNullOrEmpty(ep2.Text) && String.IsNullOrEmpty(epl2.Text))
-                            || (String.IsNullOrEmpty(ep2.Text) && !String.IsNullOrEmpty(epl2.Text)))
-                        {
-                            CANSAVE = false;
-                            mssg += "eProfile2 or Link2" + "\n";
-                        }
-                        if ((!String.IsNullOrEmpty(ep3.Text) && String.IsNullOrEmpty(epl3.Text))
-                            || (String.IsNullOrEmpty(ep3.Text) && !String.IsNullOrEmpty(epl3.Text)))
-                        {
-                            CANSAVE = false;
-                            mssg += "eProfile3 or Link3" + "\n";
-                        }
+                        CANSAVE = false;
+                        mssg += "Doc1 or LinkDoc1" + "\n";
+                    }
+                    if ((!String.IsNullOrEmpty(comboDoc2.Text) && String.IsNullOrEmpty(textDocLink2.Text))
+                        || (String.IsNullOrEmpty(comboDoc2.Text) && !String.IsNullOrEmpty(textDocLink2.Text)))
+                    {
+                        CANSAVE = false;
+                        mssg += "Doc2 or LinkDoc2" + "\n";
+                    }
+                    if ((!String.IsNullOrEmpty(comboDoc3.Text) && String.IsNullOrEmpty(textDocLink3.Text))
+                        || (String.IsNullOrEmpty(comboDoc3.Text) && !String.IsNullOrEmpty(textDocLink3.Text)))
+                    {
+                        CANSAVE = false;
+                        mssg += "Doc3 or LinkDoc3" + "\n";
+                    }
+                    if ((!String.IsNullOrEmpty(comboDoc4.Text) && String.IsNullOrEmpty(textDocLink4.Text))
+                        || (String.IsNullOrEmpty(comboDoc4.Text) && !String.IsNullOrEmpty(textDocLink4.Text)))
+                    {
+                        CANSAVE = false;
+                        mssg += "Doc4 or LinkDoc4" + "\n";
+                    }
+                    if ((!String.IsNullOrEmpty(comboDoc5.Text) && String.IsNullOrEmpty(textDocLink5.Text))
+                        || (String.IsNullOrEmpty(comboDoc5.Text) && !String.IsNullOrEmpty(textDocLink5.Text)))
+                    {
+                        CANSAVE = false;
+                        mssg += "Doc5 or LinkDoc5" + "\n";
+                    }
+                    //EDUCATION//
+                    if ((!String.IsNullOrEmpty(comboDipl1.Text) && String.IsNullOrEmpty(comboSpecDipl1.Text) && String.IsNullOrEmpty(comboDiplP1.Text))
+                        || (String.IsNullOrEmpty(comboDipl1.Text) && !String.IsNullOrEmpty(comboSpecDipl1.Text) && String.IsNullOrEmpty(comboDiplP1.Text))
+                        || (String.IsNullOrEmpty(comboDipl1.Text) && String.IsNullOrEmpty(comboSpecDipl1.Text) && !String.IsNullOrEmpty(comboDiplP1.Text))
+                        || (!String.IsNullOrEmpty(comboDipl1.Text) && !String.IsNullOrEmpty(comboSpecDipl1.Text) && String.IsNullOrEmpty(comboDiplP1.Text))
+                        || (!String.IsNullOrEmpty(comboDipl1.Text) && String.IsNullOrEmpty(comboSpecDipl1.Text) && !String.IsNullOrEmpty(comboDiplP1.Text))
+                        || (String.IsNullOrEmpty(comboDipl1.Text) && !String.IsNullOrEmpty(comboSpecDipl1.Text) && !String.IsNullOrEmpty(comboDiplP1.Text)))
+                    {
+                        CANSAVE = false;
+                        mssg += "Diploma1 or Speciality1 or Place1" + "\n";
+                    }
+                    if ((!String.IsNullOrEmpty(comboDipl2.Text) && String.IsNullOrEmpty(comboSpecDipl2.Text) && String.IsNullOrEmpty(comboDiplP2.Text))
+                        || (String.IsNullOrEmpty(comboDipl2.Text) && !String.IsNullOrEmpty(comboSpecDipl2.Text) && String.IsNullOrEmpty(comboDiplP2.Text))
+                        || (String.IsNullOrEmpty(comboDipl2.Text) && String.IsNullOrEmpty(comboSpecDipl2.Text) && !String.IsNullOrEmpty(comboDiplP2.Text))
+                        || (!String.IsNullOrEmpty(comboDipl2.Text) && !String.IsNullOrEmpty(comboSpecDipl2.Text) && String.IsNullOrEmpty(comboDiplP2.Text))
+                        || (!String.IsNullOrEmpty(comboDipl2.Text) && String.IsNullOrEmpty(comboSpecDipl2.Text) && !String.IsNullOrEmpty(comboDiplP2.Text))
+                        || (String.IsNullOrEmpty(comboDipl2.Text) && !String.IsNullOrEmpty(comboSpecDipl2.Text) && !String.IsNullOrEmpty(comboDiplP2.Text)))
+                    {
+                        CANSAVE = false;
+                        mssg += "Diploma2 or Speciality2 or Place2" + "\n";
+                    }
+                    if ((!String.IsNullOrEmpty(comboDipl3.Text) && String.IsNullOrEmpty(comboSpecDipl3.Text) && String.IsNullOrEmpty(comboDiplP3.Text))
+                        || (String.IsNullOrEmpty(comboDipl3.Text) && !String.IsNullOrEmpty(comboSpecDipl3.Text) && String.IsNullOrEmpty(comboDiplP3.Text))
+                        || (String.IsNullOrEmpty(comboDipl3.Text) && String.IsNullOrEmpty(comboSpecDipl3.Text) && !String.IsNullOrEmpty(comboDiplP3.Text))
+                        || (!String.IsNullOrEmpty(comboDipl3.Text) && !String.IsNullOrEmpty(comboSpecDipl3.Text) && String.IsNullOrEmpty(comboDiplP3.Text))
+                        || (!String.IsNullOrEmpty(comboDipl3.Text) && String.IsNullOrEmpty(comboSpecDipl3.Text) && !String.IsNullOrEmpty(comboDiplP3.Text))
+                        || (String.IsNullOrEmpty(comboDipl3.Text) && !String.IsNullOrEmpty(comboSpecDipl3.Text) && !String.IsNullOrEmpty(comboDiplP3.Text)))
+                    {
+                        CANSAVE = false;
+                        mssg += "Diploma3 or Speciality3 or Place3" + "\n";
+                    }
+                    //POST GRADUATE//
+                    if ((!String.IsNullOrEmpty(comboPostGrad1.Text) && String.IsNullOrEmpty(comboPostGradP1.Text))
+                        || (String.IsNullOrEmpty(comboPostGrad1.Text) && !String.IsNullOrEmpty(comboPostGradP1.Text)))
+                    {
+                        CANSAVE = false;
+                        mssg += "Post Graduate Training1 or Place1" + "\n";
+                    }
+                    if ((!String.IsNullOrEmpty(comboPostGrad2.Text) && String.IsNullOrEmpty(comboPostGradP2.Text))
+                        || (String.IsNullOrEmpty(comboPostGrad2.Text) && !String.IsNullOrEmpty(comboPostGradP2.Text)))
+                    {
+                        CANSAVE = false;
+                        mssg += "Post Graduate Training2 or Place2" + "\n";
+                    }
+                    if ((!String.IsNullOrEmpty(comboPostGrad3.Text) && String.IsNullOrEmpty(comboPostGradP3.Text))
+                        || (String.IsNullOrEmpty(comboPostGrad3.Text) && !String.IsNullOrEmpty(comboPostGradP3.Text)))
+                    {
+                        CANSAVE = false;
+                        mssg += "Post Graduate Training3 or Place3" + "\n";
+                    }
+                    //eProfil//
+                    if ((!String.IsNullOrEmpty(ep1.Text) && String.IsNullOrEmpty(epl1.Text))
+                        || (String.IsNullOrEmpty(ep1.Text) && !String.IsNullOrEmpty(epl1.Text)))
+                    {
+                        CANSAVE = false;
+                        mssg += "eProfile1 or Link1" + "\n";
+                    }
+                    if ((!String.IsNullOrEmpty(ep2.Text) && String.IsNullOrEmpty(epl2.Text))
+                        || (String.IsNullOrEmpty(ep2.Text) && !String.IsNullOrEmpty(epl2.Text)))
+                    {
+                        CANSAVE = false;
+                        mssg += "eProfile2 or Link2" + "\n";
+                    }
+                    if ((!String.IsNullOrEmpty(ep3.Text) && String.IsNullOrEmpty(epl3.Text))
+                        || (String.IsNullOrEmpty(ep3.Text) && !String.IsNullOrEmpty(epl3.Text)))
+                    {
+                        CANSAVE = false;
+                        mssg += "eProfile3 or Link3" + "\n";
+                    }
 
                     //////////////////CANSAVE//////////////////
                     //    string mssgyellow="";
                     //    string mssg="";
                     if (CANSAVE == true)
                     {
-
                         if (yellowfields == false)
                         {
                             mssgyellow += "Warning we will save but you have not filled  : \n";
@@ -2882,7 +2887,12 @@ namespace CVBASESWISS
                                 AllValue();
                             }
 
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                             previousToolStripMenuItem.Enabled = true;
                             nextToolStripMenuItem.Enabled = true;
@@ -2941,35 +2951,34 @@ namespace CVBASESWISS
                     }
                     else
                         MessageBox.Show(mssg, "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                      //  string mssgyellow = "";
-                     //   yellowfield();
-                        string message = "Yellow fields must be filled in!";
-                        foreach (var i in mandatory)
-                        {
-                            message += "\n" + i.Value;
-                        }
-
-                   /*     if (yellowfields == false)
-                        {
-                            mssgyellow += "\n You have forget : \n";
-
-                            foreach (var i in notmandatory)
-                            {
-                                mssgyellow += "\n" + i.Value;
-                            }
-                            message += mssgyellow;
-                        }*/
-                        MessageBox.Show(message, "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message + ex.StackTrace);
+                    //  string mssgyellow = "";
+                    //   yellowfield();
+                    string message = "Yellow fields must be filled in!";
+                    foreach (var i in mandatory)
+                    {
+                        message += "\n" + i.Value;
+                    }
+
+                    /*     if (yellowfields == false)
+                         {
+                             mssgyellow += "\n You have forget : \n";
+
+                             foreach (var i in notmandatory)
+                             {
+                                 mssgyellow += "\n" + i.Value;
+                             }
+                             message += mssgyellow;
+                         }*/
+                    MessageBox.Show(message, "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
 
         public void AllOthers(int IDCV)
@@ -4276,7 +4285,14 @@ namespace CVBASESWISS
                                 item.Category = text;
                                 soft.CV_CATEGORY.Add(item);
                                 soft.SaveChanges();
-                                MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                                 List<String> itmCat = new List<String>();
                                 itmCat.Add("");
                                 if (soft.CV_CATEGORY.Count() != 0)
@@ -4493,49 +4509,56 @@ namespace CVBASESWISS
 
                 if (!String.IsNullOrEmpty(comboGender.Text))
                 {
-                //    if (Token.getAUTHO() == true)
-                 //   {
-                        String text = comboGender.Text;
-                        var gender = soft.CV_GENDER.Where(a => a.Gender.ToLower() == text.ToLower()).FirstOrDefault();
-                        if (gender == null)
+                    //    if (Token.getAUTHO() == true)
+                    //   {
+                    String text = comboGender.Text;
+                    var gender = soft.CV_GENDER.Where(a => a.Gender.ToLower() == text.ToLower()).FirstOrDefault();
+                    if (gender == null)
+                    {
+                        DialogResult result = MessageBox.Show(" \"" + text + " \" does not exist in Gender table, do you want to create it?", "CVBASE", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
                         {
-                            DialogResult result = MessageBox.Show(" \"" + text + " \" does not exist in Gender table, do you want to create it?", "CVBASE", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                            if (result == DialogResult.Yes)
+                            CV_GENDER item = new CV_GENDER();
+                            item.Gender = text;
+                            soft.CV_GENDER.Add(item);
+                            soft.SaveChanges();
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            List<String> itmGender = new List<String>();
+                            itmGender.Add("");
+                            if (soft.CV_GENDER.Count() != 0)
                             {
-                                CV_GENDER item = new CV_GENDER();
-                                item.Gender = text;
-                                soft.CV_GENDER.Add(item);
-                                soft.SaveChanges();
-                                MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                                List<String> itmGender = new List<String>();
-                                itmGender.Add("");
-                                if (soft.CV_GENDER.Count() != 0)
+                                foreach (var x in soft.CV_GENDER.Select(a => a.Gender).OrderBy(a => a).ToList())
                                 {
-                                    foreach (var x in soft.CV_GENDER.Select(a => a.Gender).OrderBy(a => a).ToList())
-                                    {
-                                        itmGender.Add(x);
-                                    }
+                                    itmGender.Add(x);
                                 }
-                                comboGender.DataSource = itmGender;
-                                comboGender.SelectedItem = text;
                             }
-                            else
-                            {
-                                comboGender.SelectedItem = "";
-                            }
+                            comboGender.DataSource = itmGender;
+                            comboGender.SelectedItem = text;
                         }
-                   /*     else
+                        else
                         {
-                            if(gender.Gender.ToLower()=="male"){
-                                comboTitle.Text = "Mr.";
-                            }
-                            else if (gender.Gender.ToLower() == "female")
-                            {
-                                comboTitle.Text = "Mrs.";
-                            }
-                           
-                        }*/
+                            comboGender.SelectedItem = "";
+                        }
                     }
+                    /*     else
+                         {
+                             if(gender.Gender.ToLower()=="male"){
+                                 comboTitle.Text = "Mr.";
+                             }
+                             else if (gender.Gender.ToLower() == "female")
+                             {
+                                 comboTitle.Text = "Mrs.";
+                             }
+
+                         }*/
+                }
 
 
 
@@ -4993,7 +5016,14 @@ namespace CVBASESWISS
                                 item.Country = text1;
                                 soft.CV_NATIONS.Add(item);
                                 soft.SaveChanges();
-                                MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                                 List<String> itmNation1 = new List<String>();
                                 List<String> itmNation2 = new List<String>();
                                 List<String> itmNation3 = new List<String>();
@@ -5079,7 +5109,14 @@ namespace CVBASESWISS
                                 item.Country = text;
                                 soft.CV_NATIONS.Add(item);
                                 soft.SaveChanges();
-                                MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                                 List<String> itmCountry = new List<String>();
                                 itmCountry.Add("");
                                 if (soft.CV_NATIONS.Count() != 0)
@@ -5156,7 +5193,14 @@ namespace CVBASESWISS
                                 item.PersRef = text4;
                                 soft.CV_EMPLOYEE.Add(item);
                                 soft.SaveChanges();
-                                MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                                 List<String> itmEmp1 = new List<String>();
                                 List<String> itmEmp2 = new List<String>();
                                 List<String> itmEmp3 = new List<String>();
@@ -5288,7 +5332,14 @@ namespace CVBASESWISS
                                 item.JunSenior = text1;
                                 soft.CV_JUNSENIOR.Add(item);
                                 soft.SaveChanges();
-                                MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                                 List<String> itmLevel1 = new List<String>();
                                 List<String> itmLevel2 = new List<String>();
                                 List<String> itmLevel3 = new List<String>();
@@ -5487,7 +5538,14 @@ namespace CVBASESWISS
                             item.PersRef = text1;
                             soft.CV_EMPLOYEE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmEmp1 = new List<String>();
                             List<String> itmEmp2 = new List<String>();
                             List<String> itmEmp3 = new List<String>();
@@ -5563,7 +5621,14 @@ namespace CVBASESWISS
                             item.PersRef = text2;
                             soft.CV_EMPLOYEE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmEmp1 = new List<String>();
                             List<String> itmEmp2 = new List<String>();
                             List<String> itmEmp3 = new List<String>();
@@ -5639,7 +5704,14 @@ namespace CVBASESWISS
                             item.PersRef = text3;
                             soft.CV_EMPLOYEE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmEmp1 = new List<String>();
                             List<String> itmEmp2 = new List<String>();
                             List<String> itmEmp3 = new List<String>();
@@ -5709,7 +5781,14 @@ namespace CVBASESWISS
                             item.Category = text;
                             soft.CV_CATEGORY.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmcat = new List<String>();
                             itmcat.Add("");
                             if (soft.CV_CATEGORY.Count() != 0)
@@ -5792,7 +5871,14 @@ namespace CVBASESWISS
                             item.GApprec = text;
                             soft.CV_GAPPREC.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmtest = new List<String>();
                             itmtest.Add("");
                             if (soft.CV_GAPPREC.Count() != 0)
@@ -6696,7 +6782,14 @@ namespace CVBASESWISS
                                 item.Diploma = text1;
                                 soft.CV_DIPLOMA.Add(item);
                                 soft.SaveChanges();
-                                MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                                 List<String> itmDipl1 = new List<String>();
                                 List<String> itmDipl3 = new List<String>();
                                 List<String> itmDipl2 = new List<String>();
@@ -6760,7 +6853,14 @@ namespace CVBASESWISS
                                 item.Diploma = text;
                                 soft.CV_DIPLOMA.Add(item);
                                 soft.SaveChanges();
-                                MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                                 List<String> itmDipl = new List<String>();
                                 List<String> itmDipl1 = new List<String>();
                                 List<String> itmDipl2 = new List<String>();
@@ -6823,7 +6923,14 @@ namespace CVBASESWISS
                                 item.Diploma = text;
                                 soft.CV_DIPLOMA.Add(item);
                                 soft.SaveChanges();
-                                MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                                 List<String> itmDipl = new List<String>();
                                 List<String> itmDipl1 = new List<String>();
                                 List<String> itmDipl2 = new List<String>();
@@ -7495,6 +7602,7 @@ namespace CVBASESWISS
             var check = Controls.OfType<CheckBox>().ToDictionary(x => x.Name, x => x.CheckState);
             var tbox1 = new Dictionary<string, string>();
             var combo1 = new Dictionary<string, string>();
+
             foreach (TabPage t in tabControl1.TabPages)
             {
                 foreach (Control c in t.Controls)
@@ -7518,13 +7626,13 @@ namespace CVBASESWISS
             }
 
             tbox.Add(textExpSWISSComm.Name, textExpSWISSComm.Text);
+            tbox.Add(textINTLExpComm.Name, textINTLExpComm.Text);
 
-            //tbox.Add(;
             foreach (var item in tbox)
             {
                 if (AllTextBox.ContainsKey(item.Key) && item.Value != AllTextBox[item.Key])
                 {
-                    if (item.Key != "textAgeCalc" || item.Key != "textDateCreate" || item.Key != "textExpSWISSComm")
+                    if (item.Key != "textAgeCalc" || item.Key != "textDateCreate" || item.Key != "textExpSWISSComm" || item.Key == "textINTLExpComm")
                     {
                         updated = true;
                      //   AllTextBox[item.Key] = tbox[item.Key];
@@ -7588,13 +7696,14 @@ namespace CVBASESWISS
             }
             else
             {
-                checkupdate();
+                //checkupdate();
 
-                if (updated == true)
-                {
-                    InsertOrUpdateCV();
-                }
-          
+                InsertOrUpdateCV();
+
+                //if (updated == true)
+                //{
+                //    InsertOrUpdateCV();
+                //}
             }
         }
 
@@ -8531,7 +8640,14 @@ namespace CVBASESWISS
                             item.Docum = text1;
                             soft.CV_DOCUMENT.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmDoc1 = new List<String>();
                             List<String> itmDoc2 = new List<String>();
                             List<String> itmDoc3 = new List<String>();
@@ -8595,7 +8711,14 @@ namespace CVBASESWISS
                             item.Docum = text2;
                             soft.CV_DOCUMENT.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmDoc1 = new List<String>();
                             List<String> itmDoc2 = new List<String>();
                             List<String> itmDoc3 = new List<String>();
@@ -8659,7 +8782,14 @@ namespace CVBASESWISS
                             item.Docum = text3;
                             soft.CV_DOCUMENT.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmDoc1 = new List<String>();
                             List<String> itmDoc2 = new List<String>();
                             List<String> itmDoc3 = new List<String>();
@@ -8723,7 +8853,14 @@ namespace CVBASESWISS
                             item.Docum = text4;
                             soft.CV_DOCUMENT.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmDoc1 = new List<String>();
                             List<String> itmDoc2 = new List<String>();
                             List<String> itmDoc3 = new List<String>();
@@ -8787,7 +8924,14 @@ namespace CVBASESWISS
                             item.Docum = text5;
                             soft.CV_DOCUMENT.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmDoc1 = new List<String>();
                             List<String> itmDoc2 = new List<String>();
                             List<String> itmDoc3 = new List<String>();
@@ -8849,7 +8993,14 @@ namespace CVBASESWISS
                             item.Speciality = text1;
                             soft.CV_SPECIALITY.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmSpec1 = new List<String>();
                             List<String> itmSpec2 = new List<String>();
                             List<String> itmSpec3 = new List<String>();
@@ -8901,7 +9052,14 @@ namespace CVBASESWISS
                             item.Speciality = text2;
                             soft.CV_SPECIALITY.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmSpec1 = new List<String>();
                             List<String> itmSpec2 = new List<String>();
                             List<String> itmSpec3 = new List<String>();
@@ -8953,7 +9111,14 @@ namespace CVBASESWISS
                             item.Speciality = text3;
                             soft.CV_SPECIALITY.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmSpec1 = new List<String>();
                             List<String> itmSpec2 = new List<String>();
                             List<String> itmSpec3 = new List<String>();
@@ -9008,7 +9173,14 @@ namespace CVBASESWISS
                             item.Place = text1;
                             soft.CV_PLACE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmPlace1 = new List<String>();
                             List<String> itmPlace2 = new List<String>();
                             List<String> itmPlace3 = new List<String>();
@@ -9078,7 +9250,14 @@ namespace CVBASESWISS
                             item.Place = text2;
                             soft.CV_PLACE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmPlace1 = new List<String>();
                             List<String> itmPlace2 = new List<String>();
                             List<String> itmPlace3 = new List<String>();
@@ -9148,7 +9327,14 @@ namespace CVBASESWISS
                             item.Place = text3;
                             soft.CV_PLACE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmPlace1 = new List<String>();
                             List<String> itmPlace2 = new List<String>();
                             List<String> itmPlace3 = new List<String>();
@@ -9215,7 +9401,14 @@ namespace CVBASESWISS
                             item.Graduate = text1;
                             soft.CV_GRADUATE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmPlace1 = new List<String>();
                             List<String> itmPlace2 = new List<String>();
                             List<String> itmPlace3 = new List<String>();
@@ -9267,7 +9460,14 @@ namespace CVBASESWISS
                             item.Graduate = text2;
                             soft.CV_GRADUATE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmPlace3 = new List<String>();
                             List<String> itmPlace1 = new List<String>();
                             List<String> itmPlace2 = new List<String>();
@@ -9319,7 +9519,14 @@ namespace CVBASESWISS
                             item.Graduate = text3;
                             soft.CV_GRADUATE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmPlace3 = new List<String>();
                             List<String> itmPlace1 = new List<String>();
                             List<String> itmPlace2 = new List<String>();
@@ -9374,7 +9581,14 @@ namespace CVBASESWISS
                             item.Place = text4;
                             soft.CV_PLACE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmPlace1 = new List<String>();
                             List<String> itmPlace2 = new List<String>();
                             List<String> itmPlace3 = new List<String>();
@@ -9444,7 +9658,14 @@ namespace CVBASESWISS
                             item.Place = text5;
                             soft.CV_PLACE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmPlace1 = new List<String>();
                             List<String> itmPlace2 = new List<String>();
                             List<String> itmPlace3 = new List<String>();
@@ -9514,7 +9735,14 @@ namespace CVBASESWISS
                             item.Place = text6;
                             soft.CV_PLACE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmPlace1 = new List<String>();
                             List<String> itmPlace2 = new List<String>();
                             List<String> itmPlace3 = new List<String>();
@@ -9582,7 +9810,14 @@ namespace CVBASESWISS
                             item.Language = text1;
                             soft.CV_LANGUAGE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmLang1 = new List<String>();
                             List<String> itmLang2 = new List<String>();
                             List<String> itmLang3 = new List<String>();
@@ -9640,7 +9875,14 @@ namespace CVBASESWISS
                             item.Language = text2;
                             soft.CV_LANGUAGE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmLang1 = new List<String>();
                             List<String> itmLang2 = new List<String>();
                             List<String> itmLang3 = new List<String>();
@@ -9698,7 +9940,14 @@ namespace CVBASESWISS
                             item.Language = text3;
                             soft.CV_LANGUAGE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmLang1 = new List<String>();
                             List<String> itmLang2 = new List<String>();
                             List<String> itmLang3 = new List<String>();
@@ -9756,7 +10005,14 @@ namespace CVBASESWISS
                             item.Language = text4;
                             soft.CV_LANGUAGE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmLang1 = new List<String>();
                             List<String> itmLang2 = new List<String>();
                             List<String> itmLang3 = new List<String>();
@@ -9816,7 +10072,14 @@ namespace CVBASESWISS
                             item.TechnicField = text1;
                             soft.CV_TECHNICFIELD.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmTech1 = new List<String>();
                             List<String> itmTech2 = new List<String>();
                             List<String> itmTech3 = new List<String>();
@@ -9887,7 +10150,14 @@ namespace CVBASESWISS
                             item.TechnicField = text2;
                             soft.CV_TECHNICFIELD.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmTech1 = new List<String>();
                             List<String> itmTech2 = new List<String>();
                             List<String> itmTech3 = new List<String>();
@@ -9953,7 +10223,14 @@ namespace CVBASESWISS
                             item.TechnicField = text3;
                             soft.CV_TECHNICFIELD.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmTech1 = new List<String>();
                             List<String> itmTech2 = new List<String>();
                             List<String> itmTech3 = new List<String>();
@@ -10016,7 +10293,14 @@ namespace CVBASESWISS
                             item.Region = text1;
                             soft.CV_REGION.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmTech1 = new List<String>();
                             List<String> itmTech2 = new List<String>();
                             List<String> itmTech3 = new List<String>();
@@ -10068,7 +10352,14 @@ namespace CVBASESWISS
                             item.Region = text2;
                             soft.CV_REGION.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmTech1 = new List<String>();
                             List<String> itmTech2 = new List<String>();
                             List<String> itmTech3 = new List<String>();
@@ -10120,7 +10411,14 @@ namespace CVBASESWISS
                             item.Region = text3;
                             soft.CV_REGION.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmTech1 = new List<String>();
                             List<String> itmTech2 = new List<String>();
                             List<String> itmTech3 = new List<String>();
@@ -10176,7 +10474,14 @@ namespace CVBASESWISS
                             item.PersRef = text5;
                             soft.CV_EMPLOYEE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmEmp1 = new List<String>();
                             List<String> itmEmp2 = new List<String>();
                             List<String> itmEmp3 = new List<String>();
@@ -10248,7 +10553,14 @@ namespace CVBASESWISS
                             item.PersRef = text6;
                             soft.CV_EMPLOYEE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmEmp1 = new List<String>();
                             List<String> itmEmp2 = new List<String>();
                             List<String> itmEmp3 = new List<String>();
@@ -10319,7 +10631,14 @@ namespace CVBASESWISS
                             item.TechnicField = text4;
                             soft.CV_TECHNICFIELD.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmTech1 = new List<String>();
                             List<String> itmTech2 = new List<String>();
                             List<String> itmTech3 = new List<String>();
@@ -10385,7 +10704,14 @@ namespace CVBASESWISS
                             item.TechnicField = text5;
                             soft.CV_TECHNICFIELD.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmTech1 = new List<String>();
                             List<String> itmTech2 = new List<String>();
                             List<String> itmTech3 = new List<String>();
@@ -10447,7 +10773,14 @@ namespace CVBASESWISS
                             item.Unit = text1;
                             soft.CV_UNIT.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmUnit1 = new List<String>();
                             List<String> itmUnit2 = new List<String>();
                             itmUnit1.Add("");
@@ -10493,7 +10826,14 @@ namespace CVBASESWISS
                             item.Unit = text2;
                             soft.CV_UNIT.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmUnit1 = new List<String>();
                             List<String> itmUnit2 = new List<String>();
                             itmUnit1.Add("");
@@ -10539,7 +10879,14 @@ namespace CVBASESWISS
                             item.Role = text1;
                             soft.CV_ROLE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmRole1 = new List<String>();
                             List<String> itmRole2 = new List<String>();
                             itmRole1.Add("");
@@ -10585,7 +10932,14 @@ namespace CVBASESWISS
                             item.Role = text2;
                             soft.CV_ROLE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmRole1 = new List<String>();
                             List<String> itmRole2 = new List<String>();
                             itmRole1.Add("");
@@ -10633,7 +10987,14 @@ namespace CVBASESWISS
                             item.JunSenior = text1;
                             soft.CV_JUNSENIOR.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmLevel1 = new List<String>();
                             List<String> itmLevel2 = new List<String>();
                             List<String> itmLevel3 = new List<String>();
@@ -10686,7 +11047,14 @@ namespace CVBASESWISS
                             item.JunSenior = text2;
                             soft.CV_JUNSENIOR.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmLevel1 = new List<String>();
                             List<String> itmLevel2 = new List<String>();
                             List<String> itmLevel3 = new List<String>();
@@ -10740,7 +11108,14 @@ namespace CVBASESWISS
                             item.Country = text1;
                             soft.CV_NATIONS.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmcountry1 = new List<String>();
                             List<String> itmcountry2 = new List<String>();
                             List<String> itmcountry3 = new List<String>();
@@ -10799,7 +11174,14 @@ namespace CVBASESWISS
                             item.Country = text2;
                             soft.CV_NATIONS.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmcountry1 = new List<String>();
                             List<String> itmcountry2 = new List<String>();
                             List<String> itmcountry3 = new List<String>();
@@ -10855,7 +11237,14 @@ namespace CVBASESWISS
                             item.Language = text1;
                             soft.CV_LANGUAGE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmLang1 = new List<String>();
                             List<String> itmLang2 = new List<String>();
                             itmLang1.Add("");
@@ -10901,7 +11290,14 @@ namespace CVBASESWISS
                             item.Language = text2;
                             soft.CV_LANGUAGE.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmLang1 = new List<String>();
                             List<String> itmLang2 = new List<String>();
                             itmLang1.Add("");
@@ -10948,7 +11344,14 @@ namespace CVBASESWISS
                             item.EProfile = text1;
                             soft.CV_EPROFIL.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmtest1 = new List<String>();
                             List<String> itmtest2 = new List<String>();
                             List<String> itmtest3 = new List<String>();
@@ -11000,7 +11403,14 @@ namespace CVBASESWISS
                             item.EProfile = text2;
                             soft.CV_EPROFIL.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmtest1 = new List<String>();
                             List<String> itmtest2 = new List<String>();
                             List<String> itmtest3 = new List<String>();
@@ -11052,7 +11462,14 @@ namespace CVBASESWISS
                             item.EProfile = text3;
                             soft.CV_EPROFIL.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmtest1 = new List<String>();
                             List<String> itmtest2 = new List<String>();
                             List<String> itmtest3 = new List<String>();
@@ -11103,7 +11520,14 @@ namespace CVBASESWISS
                             item.Client = text1;
                             soft.CV_CLIENT.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmtest1 = new List<String>();
                             List<String> itmtest2 = new List<String>();
                             itmtest1.Add("");
@@ -11149,7 +11573,14 @@ namespace CVBASESWISS
                             item.Client = text2;
                             soft.CV_CLIENT.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmtest1 = new List<String>();
                             List<String> itmtest2 = new List<String>();
                             itmtest1.Add("");
@@ -11195,7 +11626,14 @@ namespace CVBASESWISS
                             item.Client = text1;
                             soft.CV_CLIENT.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmtest1 = new List<String>();
                             List<String> itmtest2 = new List<String>();
                             itmtest1.Add("");
@@ -11242,7 +11680,14 @@ namespace CVBASESWISS
                             item.Client = text2;
                             soft.CV_CLIENT.Add(item);
                             soft.SaveChanges();
-                            MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                             List<String> itmtest1 = new List<String>();
                             List<String> itmtest2 = new List<String>();
                             itmtest1.Add("");
@@ -12511,7 +12956,14 @@ namespace CVBASESWISS
                                 item.TOWN = text;
                                 soft.CV_TOWNS.Add(item);
                                 soft.SaveChanges();
-                                MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                                 List<String> itmCountry = new List<String>();
                                 itmCountry.Add("");
                                 if (soft.CV_TOWNS.Count() != 0)

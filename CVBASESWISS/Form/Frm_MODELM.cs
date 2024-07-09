@@ -64,7 +64,14 @@ namespace CVBASESWISS
                         update = textBox1.Text;
                     }
 
-                    MessageBox.Show("Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    var w = new Form() { Size = new Size(0, 0) };
+                    Task.Delay(TimeSpan.FromSeconds(1.5))
+                        .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                    //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
 
                     testCLOSE = true;
 
