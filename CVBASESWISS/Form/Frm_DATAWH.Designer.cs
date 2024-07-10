@@ -142,6 +142,7 @@
             "ROLE",
             "SPECIALITY",
             "SCIH UNIT",
+            "TECHNICAL FIELD",
             "TOWN"});
             this.comboTa.Location = new System.Drawing.Point(123, 12);
             this.comboTa.Name = "comboTa";

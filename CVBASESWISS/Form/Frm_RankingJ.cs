@@ -132,7 +132,7 @@ namespace CVBASESWISS
                     c3 = V3p.Text;
 
                     var w = new Form() { Size = new Size(0, 0) };
-                    Task.Delay(TimeSpan.FromSeconds(1.5))
+                    Task.Delay(TimeSpan.FromSeconds(1))
                         .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                     //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

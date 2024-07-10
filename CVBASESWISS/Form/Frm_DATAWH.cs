@@ -51,7 +51,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_CATEGORY.Count() != 0)
                     {
-                        foreach (var x in soft.CV_CATEGORY.ToList())
+                        foreach (var x in soft.CV_CATEGORY.OrderBy(a => a.Category).ToList())
                             table.Rows.Add(x.IDCat,x.Category);
                     }
                 }
@@ -61,7 +61,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_CLIENT.Count() != 0)
                     {
-                        foreach (var x in soft.CV_CLIENT.ToList())
+                        foreach (var x in soft.CV_CLIENT.OrderBy(a => a.Client).ToList())
                             table.Rows.Add(x.IDClient,x.Client);
                     }
                 }
@@ -71,7 +71,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_DIPLOMA.Count() != 0)
                     {
-                        foreach (var x in soft.CV_DIPLOMA.ToList())
+                        foreach (var x in soft.CV_DIPLOMA.OrderBy(a => a.Diploma).ToList())
                             table.Rows.Add(x.IDDiploma,x.Diploma);
                     }
                 }
@@ -81,7 +81,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_DOCUMENT.Count() != 0)
                     {
-                        foreach (var x in soft.CV_DOCUMENT.ToList())
+                        foreach (var x in soft.CV_DOCUMENT.OrderBy(a => a.Docum).ToList())
                             table.Rows.Add(x.IDDoc,x.Docum);
                     }
                 }
@@ -91,7 +91,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_EMPLOYEE.Count() != 0)
                     {
-                        foreach (var x in soft.CV_EMPLOYEE.ToList())
+                        foreach (var x in soft.CV_EMPLOYEE.OrderBy(a => a.PersRef).ToList())
                             table.Rows.Add(x.IDPersRef,x.PersRef);
                     }
                 }
@@ -101,7 +101,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_GENDER.Count() != 0)
                     {
-                        foreach (var x in soft.CV_GENDER.ToList())
+                        foreach (var x in soft.CV_GENDER.OrderBy(a => a.Gender).ToList())
                             table.Rows.Add(x.IDGender,x.Gender);
                     }
                 }
@@ -111,7 +111,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_GRADUATE.Count() != 0)
                     {
-                        foreach (var x in soft.CV_GRADUATE.ToList())
+                        foreach (var x in soft.CV_GRADUATE.OrderBy(a => a.Graduate).ToList())
                             table.Rows.Add(x.IDGraduate,x.Graduate);
                     }
                 }
@@ -121,7 +121,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_LANGUAGE.Count() != 0)
                     {
-                        foreach (var x in soft.CV_LANGUAGE)
+                        foreach (var x in soft.CV_LANGUAGE.OrderBy(a => a.Language).ToList())
                             table.Rows.Add(x.IDLanguage,x.Language);
                     }
                 }
@@ -131,7 +131,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_NATIONS.Count() != 0)
                     {
-                        foreach (var x in soft.CV_NATIONS.ToList())
+                        foreach (var x in soft.CV_NATIONS.OrderBy(a => a.Country).ToList())
                             table.Rows.Add(x.IDCountry,x.Country);
                     }
                 }
@@ -141,7 +141,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_TOWNS.Count() != 0)
                     {
-                        foreach (var x in soft.CV_TOWNS.ToList())
+                        foreach (var x in soft.CV_TOWNS.OrderBy(a => a.TOWN).ToList())
                             table.Rows.Add(x.ID, x.TOWN);
                     }
                 }
@@ -151,7 +151,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_REGION.Count() != 0)
                     {
-                        foreach (var x in soft.CV_REGION.ToList())
+                        foreach (var x in soft.CV_REGION.OrderBy(a => a.Region).ToList())
                             table.Rows.Add(x.IDRegion,x.Region);
                     }
                 }
@@ -161,7 +161,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_ROLE.Count() != 0)
                     {
-                        foreach (var x in soft.CV_ROLE.ToList())
+                        foreach (var x in soft.CV_ROLE.OrderBy(a => a.Role).ToList())
                             table.Rows.Add(x.IDRole,x.Role);
                     }
                 }
@@ -171,7 +171,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_SPECIALITY.Count() != 0)
                     {
-                        foreach (var x in soft.CV_SPECIALITY.ToList())
+                        foreach (var x in soft.CV_SPECIALITY.OrderBy(a => a.Speciality).ToList())
                             table.Rows.Add(x.IDSpeciality,x.Speciality);
                     }
                 }
@@ -181,7 +181,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_UNIT.Count() != 0)
                     {
-                        foreach (var x in soft.CV_UNIT.ToList())
+                        foreach (var x in soft.CV_UNIT.OrderBy(a => a.Unit).ToList())
                             table.Rows.Add(x.IDSCIHUnit,x.Unit);
                     }
                 }
@@ -191,7 +191,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_WRSPLEVEL.Count() != 0)
                     {
-                        foreach (var x in soft.CV_WRSPLEVEL.ToList())
+                        foreach (var x in soft.CV_WRSPLEVEL.OrderBy(a => a.WrSp).ToList())
                             table.Rows.Add(x.IDWrSp,x.WrSp);
                     }
                 }
@@ -201,7 +201,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_GAPPREC.Count() != 0)
                     {
-                        foreach (var x in soft.CV_GAPPREC.ToList())
+                        foreach (var x in soft.CV_GAPPREC.OrderBy(a => a.GApprec).ToList())
                             table.Rows.Add(x.IDGApprec, x.GApprec);
                     }
                 }
@@ -211,7 +211,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_TEST.Count() != 0)
                     {
-                        foreach (var x in soft.CV_TEST.ToList())
+                        foreach (var x in soft.CV_TEST.OrderBy(a => a.Test).ToList())
                             table.Rows.Add(x.IDTest, x.Test);
                     }
                 }
@@ -221,7 +221,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_EPROFIL.Count() != 0)
                     {
-                        foreach (var x in soft.CV_EPROFIL.ToList())
+                        foreach (var x in soft.CV_EPROFIL.OrderBy(a => a.EProfile).ToList())
                             table.Rows.Add(x.IDEProf, x.EProfile);
                     }
                 }
@@ -231,7 +231,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_ONCHATPLAT.Count() != 0)
                     {
-                        foreach (var x in soft.CV_ONCHATPLAT.ToList())
+                        foreach (var x in soft.CV_ONCHATPLAT.OrderBy(a => a.OnlineChat).ToList())
                             table.Rows.Add(x.IDChat, x.OnlineChat);
                     }
                 }
@@ -241,7 +241,7 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_PLACE.Count() != 0)
                     {
-                        foreach (var x in soft.CV_PLACE.ToList())
+                        foreach (var x in soft.CV_PLACE.OrderBy(a => a.Place).ToList())
                             table.Rows.Add(x.IDPlace, x.Place);
                     }
                 }
@@ -251,8 +251,18 @@ namespace CVBASESWISS
                 {
                     if (soft.CV_JUNSENIOR.Count() != 0)
                     {
-                        foreach (var x in soft.CV_JUNSENIOR.ToList())
+                        foreach (var x in soft.CV_JUNSENIOR.OrderBy(a => a.JunSenior).ToList())
                             table.Rows.Add(x.IDJunSenior, x.JunSenior);
+                    }
+                }
+
+                //TECHNICAL FIELD//
+                if (comboTa.Text == "TECHNICAL FIELD")
+                {
+                    if (soft.CV_TECHNICFIELD.Count() != 0)
+                    {
+                        foreach (var x in soft.CV_TECHNICFIELD.OrderBy(a => a.TechnicField).ToList())
+                            table.Rows.Add(x.IDTechField, x.TechnicField);
                     }
                 }
 
@@ -299,7 +309,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -327,7 +337,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -355,7 +365,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -385,7 +395,7 @@ namespace CVBASESWISS
 
 
                                     var w = new Form() { Size = new Size(0, 0) };
-                                    Task.Delay(TimeSpan.FromSeconds(1.5))
+                                    Task.Delay(TimeSpan.FromSeconds(1))
                                         .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                     //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -416,7 +426,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -444,7 +454,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -472,7 +482,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -500,7 +510,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -528,7 +538,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -556,7 +566,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -584,7 +594,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -612,7 +622,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -640,7 +650,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -668,7 +678,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -696,7 +706,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -724,7 +734,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -752,7 +762,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -780,7 +790,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -808,7 +818,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -836,7 +846,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -866,7 +876,7 @@ namespace CVBASESWISS
 
 
                                     var w = new Form() { Size = new Size(0, 0) };
-                                    Task.Delay(TimeSpan.FromSeconds(1.5))
+                                    Task.Delay(TimeSpan.FromSeconds(1))
                                         .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                     //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -880,6 +890,34 @@ namespace CVBASESWISS
                             }
                             else
                                 MessageBox.Show("You can't add this Level", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                        //TECHNICAL FIELD//
+                        if (comboTa.Text == "TECHNICAL FIELD")
+                        {
+                            if (soft.CV_TECHNICFIELD.Where(a => a.TechnicField.ToLower() == textVal.Text.ToLower()).Count() == 0)
+                            {
+                                var newInsert = new CV_TECHNICFIELD
+                                {
+                                    TechnicField = textVal.Text
+                                };
+
+                                soft.CV_TECHNICFIELD.Add(newInsert);
+                                soft.SaveChanges();
+
+
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
+                            else
+                                MessageBox.Show("Technical field already in", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
@@ -922,7 +960,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -943,7 +981,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -964,7 +1002,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -988,7 +1026,7 @@ namespace CVBASESWISS
 
 
                                     var w = new Form() { Size = new Size(0, 0) };
-                                    Task.Delay(TimeSpan.FromSeconds(1.5))
+                                    Task.Delay(TimeSpan.FromSeconds(1))
                                         .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                     //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1012,7 +1050,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1033,7 +1071,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1054,7 +1092,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1075,7 +1113,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1096,7 +1134,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1117,7 +1155,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1138,7 +1176,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1159,7 +1197,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1180,7 +1218,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1201,7 +1239,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1222,7 +1260,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1243,7 +1281,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1264,7 +1302,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1285,7 +1323,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1306,7 +1344,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1327,7 +1365,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1352,7 +1390,7 @@ namespace CVBASESWISS
 
 
                                     var w = new Form() { Size = new Size(0, 0) };
-                                    Task.Delay(TimeSpan.FromSeconds(1.5))
+                                    Task.Delay(TimeSpan.FromSeconds(1))
                                         .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                     //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1363,6 +1401,27 @@ namespace CVBASESWISS
                                 }
                                 else
                                     MessageBox.Show("You can't change the value of Junior and Senior", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+                            //TECHNICAL FIELD//
+                            if (comboTa.Text == "TECHNICAL FIELD")
+                            {
+                                var modif = soft.CV_TECHNICFIELD.Where(a => a.IDTechField == GridSelect).FirstOrDefault();
+
+                                modif.TechnicField = textVal.Text;
+
+                                soft.SaveChanges();
+
+
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
                             }
                         }
                         else
@@ -1426,7 +1485,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1447,7 +1506,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1468,7 +1527,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1492,7 +1551,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1516,7 +1575,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1537,7 +1596,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1558,7 +1617,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1579,7 +1638,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1600,7 +1659,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1621,7 +1680,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1642,7 +1701,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1663,7 +1722,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1684,7 +1743,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1705,7 +1764,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1726,7 +1785,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1747,7 +1806,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1768,7 +1827,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1789,7 +1848,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1810,7 +1869,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1831,7 +1890,7 @@ namespace CVBASESWISS
 
 
                             var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1.5))
+                            Task.Delay(TimeSpan.FromSeconds(1))
                                 .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                             //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1856,7 +1915,7 @@ namespace CVBASESWISS
 
 
                                 var w = new Form() { Size = new Size(0, 0) };
-                                Task.Delay(TimeSpan.FromSeconds(1.5))
+                                Task.Delay(TimeSpan.FromSeconds(1))
                                     .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
 
                                 //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1867,6 +1926,27 @@ namespace CVBASESWISS
                             }
                             else
                                 MessageBox.Show("You can't delete Junior and Senior", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                        //TECHNICAL FIELD//
+                        if (comboTa.Text == "TECHNICAL FIELD")
+                        {
+                            var del = soft.CV_TECHNICFIELD.Where(a => a.IDTechField == GridSelect).FirstOrDefault();
+
+                            soft.CV_TECHNICFIELD.Remove(del);
+
+                            soft.SaveChanges();
+
+
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                            remplir();
                         }
 
                         textVal.Text = null;

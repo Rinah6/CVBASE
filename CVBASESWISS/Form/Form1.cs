@@ -48,13 +48,19 @@ namespace CVBASESWISS
             {
                 dataco = soft.CV_DATASET.Where(a => a.ID_USERS == isco2).FirstOrDefault().DATASETCV;
 
+                var w = new Form() { Size = new Size(0, 0) };
+                Task.Delay(TimeSpan.FromSeconds(1))
+                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
                 if (!String.IsNullOrEmpty(dataco))
                 {
-                    MessageBox.Show("You are connected to the " + dataco + " data set!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //MessageBox.Show("You are connected to the " + dataco + " data set!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(w, "You are connected to the " + dataco + " data set!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
-                    MessageBox.Show("Please define the data set!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show("Please define the data set!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(w, "Please define the data set!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
