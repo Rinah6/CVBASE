@@ -6685,33 +6685,60 @@ namespace CVBASESWISS
                 int CR4 = 0;
                 int CR5 = 0;
 
+                //if (!String.IsNullOrEmpty(textBonusDoc.Text))
+                //  //  BONUS = int.Parse(textBonusDoc.Text);
+                //    int.TryParse(textBonusDoc.Text, out BONUS);
+                //if (!String.IsNullOrEmpty(textScoreDipGen.Text))
+                // //   DIPL = int.Parse(textScoreDipGen.Text);
+                //int.TryParse(textScoreDipGen.Text, out DIPL);
+                //if (!String.IsNullOrEmpty(textTFScore.Text))
+                // //   TFI = int.Parse(textTFScore.Text);
+                //int.TryParse(textTFScore.Text, out TFI);
+                //if (!String.IsNullOrEmpty(textRScore.Text))
+                // //   REG = int.Parse(textRScore.Text);
+                //int.TryParse(textRScore.Text, out REG);
+                //if (!String.IsNullOrEmpty(textCRScore1.Text))
+                //  //  CR1 = int.Parse(textCRScore1.Text);
+                //int.TryParse(textCRScore1.Text, out CR1);
+                //if (!String.IsNullOrEmpty(textCRScore2.Text))
+                //  //  CR2 = int.Parse(textCRScore2.Text);
+                //int.TryParse(textCRScore2.Text, out CR2);
+                //if (!String.IsNullOrEmpty(textCRScore3.Text))
+                // //   CR3 = int.Parse(textCRScore3.Text);
+                //int.TryParse(textCRScore3.Text, out CR3);
+                //if (!String.IsNullOrEmpty(textCRScore4.Text))
+                //  //  CR4 = int.Parse(textCRScore4.Text);
+                //int.TryParse(textCRScore4.Text, out CR4);
+                //if (!String.IsNullOrEmpty(textCRScore5.Text))
+                // //   CR5 = int.Parse(textCRScore5.Text);
+                //int.TryParse(textCRScore5.Text, out CR5);
+
                 if (!String.IsNullOrEmpty(textBonusDoc.Text))
-                  //  BONUS = int.Parse(textBonusDoc.Text);
-                int.TryParse(textBonusDoc.Text, out BONUS);
+                    int.TryParse(textBonusDoc.Text, out BONUS);
+
                 if (!String.IsNullOrEmpty(textScoreDipGen.Text))
-                 //   DIPL = int.Parse(textScoreDipGen.Text);
-                int.TryParse(textScoreDipGen.Text, out DIPL);
+                    int.TryParse(textScoreDipGen.Text, out DIPL);
+
                 if (!String.IsNullOrEmpty(textTFScore.Text))
-                 //   TFI = int.Parse(textTFScore.Text);
-                int.TryParse(textTFScore.Text, out TFI);
+                    int.TryParse(textTFScore.Text, out TFI);
+
                 if (!String.IsNullOrEmpty(textRScore.Text))
-                 //   REG = int.Parse(textRScore.Text);
-                int.TryParse(textRScore.Text, out REG);
+                    int.TryParse(textRScore.Text, out REG);
+
                 if (!String.IsNullOrEmpty(textCRScore1.Text))
-                  //  CR1 = int.Parse(textCRScore1.Text);
-                int.TryParse(textCRScore1.Text, out CR1);
+                    int.TryParse(textCRScore1.Text, out CR1);
+
                 if (!String.IsNullOrEmpty(textCRScore2.Text))
-                  //  CR2 = int.Parse(textCRScore2.Text);
-                int.TryParse(textCRScore2.Text, out CR2);
+                    int.TryParse(textCRScore2.Text, out CR2);
+
                 if (!String.IsNullOrEmpty(textCRScore3.Text))
-                 //   CR3 = int.Parse(textCRScore3.Text);
-                int.TryParse(textCRScore3.Text, out CR3);
+                    int.TryParse(textCRScore3.Text, out CR3);
+
                 if (!String.IsNullOrEmpty(textCRScore4.Text))
-                  //  CR4 = int.Parse(textCRScore4.Text);
-                int.TryParse(textCRScore4.Text, out CR4);
+                    int.TryParse(textCRScore4.Text, out CR4);
+
                 if (!String.IsNullOrEmpty(textCRScore5.Text))
-                 //   CR5 = int.Parse(textCRScore5.Text);
-                int.TryParse(textCRScore5.Text, out CR5);
+                    int.TryParse(textCRScore5.Text, out CR5);
 
                 int TOTAL = BONUS + DIPL + TFI + REG + CR1 + CR2 + CR3 + CR4 + CR5;
 
@@ -6824,9 +6851,6 @@ namespace CVBASESWISS
                         }
                     }
                 }
-
-
-
             }
             catch (Exception ex)
             {
@@ -7912,11 +7936,24 @@ namespace CVBASESWISS
 
         private void textCRYears5_Validated(object sender, EventArgs e)
         {
+            //if (String.IsNullOrEmpty(textCRYears5.Text))
+            //    textCRYears5.Text = "";
             if (String.IsNullOrEmpty(textCRYears5.Text))
-                textCRYears5.Text = "";
-        }
+                textCRYears5.Text = "0";
+            int testint;
+            if (int.TryParse(textCRYears5.Text, out testint))
+            {
+                textCRYears5.Text = string.Format("{0:#,##0}", int.Parse(textCRYears5.Text));
+            }
+            else
+            {
+                string message = "Number too large";
+                string caption = "CVBASE";
 
-    
+                MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textCRYears5.Text = "0";
+            }
+        }
 
         private void textDiplY1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -11720,8 +11757,7 @@ namespace CVBASESWISS
         }
 
         private void comboDipl1_TextChanged(object sender, EventArgs e)
-        {
-                                       
+        {                     
             try
             {
 
@@ -11783,7 +11819,6 @@ namespace CVBASESWISS
 
         private void comboDipl2_TextChanged(object sender, EventArgs e)
         {
-        
            try
             {
                 DbCVBASE soft = new DbCVBASE();
@@ -12333,8 +12368,6 @@ namespace CVBASESWISS
                 textBonusDoc.Text = "0";
         }
 
-      
-
         private void textScoreDipl3_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
@@ -12719,18 +12752,6 @@ namespace CVBASESWISS
             }
         }
 
-        private void textCRScore5_Validated(object sender, EventArgs e)
-        {
-            try
-            {
-                CALTOTAL();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
         private void comboTitle_TextChanged(object sender, EventArgs e)
         {
          
@@ -12988,6 +13009,18 @@ namespace CVBASESWISS
                         }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void textCRScore5_TextChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                CALTOTAL();
             }
             catch (Exception ex)
             {

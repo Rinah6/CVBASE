@@ -2503,7 +2503,7 @@
             this.textCRScore5.TabIndex = 986;
             this.textCRScore5.Text = "0";
             this.textCRScore5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.textCRScore5.Validated += new System.EventHandler(this.textCRScore5_Validated);
+            this.textCRScore5.TextChanged += new System.EventHandler(this.textCRScore5_TextChanged_1);
             // 
             // label119
             // 
