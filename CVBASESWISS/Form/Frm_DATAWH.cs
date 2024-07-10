@@ -1479,73 +1479,13 @@ namespace CVBASESWISS
                         {
                             var del = soft.CV_CATEGORY.Where(a => a.IDCat == GridSelect).FirstOrDefault();
 
-                            soft.CV_CATEGORY.Remove(del);
-
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-
-                            remplir();
-                        }
-
-                        //CLIENT//
-                        if (comboTa.Text == "CLIENT")
-                        {
-                            var del = soft.CV_CLIENT.Where(a => a.IDClient == GridSelect).FirstOrDefault();
-
-                            soft.CV_CLIENT.Remove(del);
-
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-
-                            remplir();
-                        }
-
-                        //DIPLOMA//
-                        if (comboTa.Text == "DIPLOMA")
-                        {
-                            var del = soft.CV_DIPLOMA.Where(a => a.IDDiploma == GridSelect).FirstOrDefault();
-
-                            soft.CV_DIPLOMA.Remove(del);
-
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-
-                            remplir();
-                        }
-
-                        //DOCUMENT//
-                        if (comboTa.Text == "DOCUMENT")
-                        {
-                            var del = soft.CV_DOCUMENT.Where(a => a.IDDoc == GridSelect).FirstOrDefault();
-                            var isDoc6 = soft.CV_DOCUMENT.Where(a => a.Docum == "Data retention authorisation").FirstOrDefault().IDDoc;
-
-                            if(del.IDDoc != isDoc6)
+                            if (soft.CV_CVBASE.Where(a => a.IDCat == del.IDCat).Count() != 0 || soft.CV_VISITSPMU.Where(a => a.IDCategory == del.IDCat).Count() != 0)
                             {
-                                soft.CV_DOCUMENT.Remove(del);
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_CATEGORY.Remove(del);
 
                                 soft.SaveChanges();
 
@@ -1560,29 +1500,123 @@ namespace CVBASESWISS
 
                                 remplir();
                             }
+                        }
+
+                        //CLIENT//
+                        if (comboTa.Text == "CLIENT")
+                        {
+                            var del = soft.CV_CLIENT.Where(a => a.IDClient == GridSelect).FirstOrDefault();
+
+                            if (soft.CV_EXPSWTPH.Where(a => a.IDClient == del.IDClient).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                             else
-                                MessageBox.Show("You can't delete the Document 6", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            {
+                                soft.CV_CLIENT.Remove(del);
+
+                                soft.SaveChanges();
+
+
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
+                        }
+
+                        //DIPLOMA//
+                        if (comboTa.Text == "DIPLOMA")
+                        {
+                            var del = soft.CV_DIPLOMA.Where(a => a.IDDiploma == GridSelect).FirstOrDefault();
+
+                            if (soft.CV_EDUC.Where(a => a.IDDiploma == del.IDDiploma).Count() != 0 || soft.CV_RANKDIPLOMA.Where(a => a.IDDiploma == del.IDDiploma).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_DIPLOMA.Remove(del);
+
+                                soft.SaveChanges();
+
+
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
+                        }
+
+                        //DOCUMENT//
+                        if (comboTa.Text == "DOCUMENT")
+                        {
+                            var del = soft.CV_DOCUMENT.Where(a => a.IDDoc == GridSelect).FirstOrDefault();
+                            var isDoc6 = soft.CV_DOCUMENT.Where(a => a.Docum == "Data retention authorisation").FirstOrDefault().IDDoc;
+
+                            if (soft.CV_DOC.Where(a => a.IDDoc == del.IDDoc).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                if (del.IDDoc != isDoc6)
+                                {
+                                    soft.CV_DOCUMENT.Remove(del);
+
+                                    soft.SaveChanges();
+
+
+                                    var w = new Form() { Size = new Size(0, 0) };
+                                    Task.Delay(TimeSpan.FromSeconds(1))
+                                        .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                    //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                    remplir();
+                                }
+                                else
+                                    MessageBox.Show("You can't delete the Document 6", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
 
                         //EMPLOYEE//
                         if (comboTa.Text == "EMPLOYEE")
                         {
                             var del = soft.CV_EMPLOYEE.Where(a => a.IDPersRef == GridSelect).FirstOrDefault();
+                            if (soft.CV_CVBASE.Where(a => a.IDPersRef == del.IDPersRef).Count() != 0 || soft.CV_EXPSWTPH.Where(a => a.IDPersRef == del.IDPersRef).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_EMPLOYEE.Remove(del);
 
-                            soft.CV_EMPLOYEE.Remove(del);
-
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                soft.SaveChanges();
 
 
-                            remplir();
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
                         }
 
                         //GENDER//
@@ -1590,20 +1624,27 @@ namespace CVBASESWISS
                         {
                             var del = soft.CV_GENDER.Where(a => a.IDGender == GridSelect).FirstOrDefault();
 
-                            soft.CV_GENDER.Remove(del);
+                            if (soft.CV_CVBASE.Where(a => a.IDGender == del.IDGender).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_GENDER.Remove(del);
 
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                soft.SaveChanges();
 
 
-                            remplir();
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
                         }
 
                         //GRADUATION//
@@ -1611,20 +1652,27 @@ namespace CVBASESWISS
                         {
                             var del = soft.CV_GRADUATE.Where(a => a.IDGraduate == GridSelect).FirstOrDefault();
 
-                            soft.CV_GRADUATE.Remove(del);
+                            if (soft.CV_GRAD.Where(a => a.IDGraduate == del.IDGraduate).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_GRADUATE.Remove(del);
 
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                soft.SaveChanges();
 
 
-                            remplir();
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
                         }
 
                         //LANGUAGE//
@@ -1632,20 +1680,27 @@ namespace CVBASESWISS
                         {
                             var del = soft.CV_LANGUAGE.Where(a => a.IDLanguage == GridSelect).FirstOrDefault();
 
-                            soft.CV_LANGUAGE.Remove(del);
+                            if (soft.CV_EXPSWTPH.Where(a => a.IDLanguage == del.IDLanguage).Count() != 0 || soft.CV_WRSP.Where(a => a.IDLanguage == del.IDLanguage).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_LANGUAGE.Remove(del);
 
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                soft.SaveChanges();
 
 
-                            remplir();
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
                         }
 
                         //NATION//
@@ -1653,20 +1708,27 @@ namespace CVBASESWISS
                         {
                             var del = soft.CV_NATIONS.Where(a => a.IDCountry == GridSelect).FirstOrDefault();
 
-                            soft.CV_NATIONS.Remove(del);
+                            if (soft.CV_CVBASE.Where(a => a.IDCountry == del.IDCountry).Count() != 0 || soft.CV_EXPSWTPH.Where(a => a.IDCountry == del.IDCountry).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_NATIONS.Remove(del);
 
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                soft.SaveChanges();
 
 
-                            remplir();
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
                         }
 
                         //TOWN//
@@ -1674,41 +1736,54 @@ namespace CVBASESWISS
                         {
                             var del = soft.CV_TOWNS.Where(a => a.ID == GridSelect).FirstOrDefault();
 
-                            soft.CV_TOWNS.Remove(del);
+                            if (soft.CV_CVBASE.Where(a => a.IDTOWN == del.ID).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_TOWNS.Remove(del);
 
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                soft.SaveChanges();
 
 
-                            remplir();
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
                         }
 
                         //REGION//
                         if (comboTa.Text == "REGION")
                         {
                             var del = soft.CV_REGION.Where(a => a.IDRegion == GridSelect).FirstOrDefault();
+                            if (soft.CV_INTLREGEXP.Where(a => a.IDRegion == del.IDRegion).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_REGION.Remove(del);
 
-                            soft.CV_REGION.Remove(del);
-
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                soft.SaveChanges();
 
 
-                            remplir();
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
                         }
 
                         //ROLE//
@@ -1716,20 +1791,27 @@ namespace CVBASESWISS
                         {
                             var del = soft.CV_ROLE.Where(a => a.IDRole == GridSelect).FirstOrDefault();
 
-                            soft.CV_ROLE.Remove(del);
+                            if (soft.CV_EXPSWTPH.Where(a => a.IDRole == del.IDRole).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_ROLE.Remove(del);
 
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                soft.SaveChanges();
 
 
-                            remplir();
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
                         }
 
                         //SPECIALITY//
@@ -1737,20 +1819,27 @@ namespace CVBASESWISS
                         {
                             var del = soft.CV_SPECIALITY.Where(a => a.IDSpeciality == GridSelect).FirstOrDefault();
 
-                            soft.CV_SPECIALITY.Remove(del);
+                            if (soft.CV_EDUC.Where(a => a.IDSpeciality == del.IDSpeciality).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_SPECIALITY.Remove(del);
 
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                soft.SaveChanges();
 
 
-                            remplir();
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
                         }
 
                         //SCHI UNIT//
@@ -1758,20 +1847,27 @@ namespace CVBASESWISS
                         {
                             var del = soft.CV_UNIT.Where(a => a.IDSCIHUnit == GridSelect).FirstOrDefault();
 
-                            soft.CV_UNIT.Remove(del);
+                            if (soft.CV_EXPSWTPH.Where(a => a.IDSCIHUnit == del.IDSCIHUnit).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_UNIT.Remove(del);
 
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                soft.SaveChanges();
 
 
-                            remplir();
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
                         }
 
                         //LANGUAGE LEVEL//
@@ -1779,20 +1875,27 @@ namespace CVBASESWISS
                         {
                             var del = soft.CV_WRSPLEVEL.Where(a => a.IDWrSp == GridSelect).FirstOrDefault();
 
-                            soft.CV_WRSPLEVEL.Remove(del);
+                            if (soft.CV_WRSP.Where(a => a.IDWr == del.IDWrSp).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_WRSPLEVEL.Remove(del);
 
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                soft.SaveChanges();
 
 
-                            remplir();
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
                         }
 
                         //APPRECIATION//
@@ -1800,20 +1903,27 @@ namespace CVBASESWISS
                         {
                             var del = soft.CV_GAPPREC.Where(a => a.IDGApprec == GridSelect).FirstOrDefault();
 
-                            soft.CV_GAPPREC.Remove(del);
+                            if (soft.CV_VISITSPMU.Where(a => a.IDGApprec == del.IDGApprec).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_GAPPREC.Remove(del);
 
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                soft.SaveChanges();
 
 
-                            remplir();
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
                         }
 
                         //TEST//
@@ -1842,74 +1952,13 @@ namespace CVBASESWISS
                         {
                             var del = soft.CV_EPROFIL.Where(a => a.IDEProf == GridSelect).FirstOrDefault();
 
-                            soft.CV_EPROFIL.Remove(del);
-
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-
-                            remplir();
-                        }
-
-                        //ONLINE CHAT PLATFORM//
-                        if (comboTa.Text == "ONLINE CHAT PLATFORM")
-                        {
-                            var del = soft.CV_ONCHATPLAT.Where(a => a.IDChat == GridSelect).FirstOrDefault();
-
-                            soft.CV_ONCHATPLAT.Remove(del);
-
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-
-                            remplir();
-                        }
-
-                        //PLACE//
-                        if (comboTa.Text == "PLACE")
-                        {
-                            var del = soft.CV_PLACE.Where(a => a.IDPlace == GridSelect).FirstOrDefault();
-
-                            soft.CV_PLACE.Remove(del);
-
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-
-                            remplir();
-                        }
-
-                        //LEVEL//
-                        if (comboTa.Text == "LEVEL")
-                        {
-                            var del = soft.CV_JUNSENIOR.Where(a => a.IDJunSenior == GridSelect).FirstOrDefault();
-                            var idJUN = soft.CV_JUNSENIOR.Where(a => a.JunSenior == "Junior").FirstOrDefault().IDJunSenior;
-                            var idSEN = soft.CV_JUNSENIOR.Where(a => a.JunSenior == "Senior").FirstOrDefault().IDJunSenior;
-
-                            if (del.IDJunSenior != idJUN && del.IDJunSenior != idSEN)
+                            if (soft.CV_EPRO.Where(a => a.IDEProf == del.IDEProf).Count() != 0)
                             {
-                                soft.CV_JUNSENIOR.Remove(del);
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_EPROFIL.Remove(del);
 
                                 soft.SaveChanges();
 
@@ -1924,8 +1973,97 @@ namespace CVBASESWISS
 
                                 remplir();
                             }
+                        }
+
+                        //ONLINE CHAT PLATFORM//
+                        if (comboTa.Text == "ONLINE CHAT PLATFORM")
+                        {
+                            var del = soft.CV_ONCHATPLAT.Where(a => a.IDChat == GridSelect).FirstOrDefault();
+
+                            if (soft.CV_ONCHAT.Where(a => a.IDChat == del.IDChat).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                             else
-                                MessageBox.Show("You can't delete Junior and Senior", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            {
+                                soft.CV_ONCHATPLAT.Remove(del);
+
+                                soft.SaveChanges();
+
+
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
+                        }
+
+                        //PLACE//
+                        if (comboTa.Text == "PLACE")
+                        {
+                            var del = soft.CV_PLACE.Where(a => a.IDPlace == GridSelect).FirstOrDefault();
+
+                            if (soft.CV_EDUC.Where(a => a.IDPlace == del.IDPlace).Count() != 0 || soft.CV_GRAD.Where(a => a.IDPlace == del.IDPlace).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_PLACE.Remove(del);
+
+                                soft.SaveChanges();
+
+
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
+                        }
+
+                        //LEVEL//
+                        if (comboTa.Text == "LEVEL")
+                        {
+                            var del = soft.CV_JUNSENIOR.Where(a => a.IDJunSenior == GridSelect).FirstOrDefault();
+                            var idJUN = soft.CV_JUNSENIOR.Where(a => a.JunSenior == "Junior").FirstOrDefault().IDJunSenior;
+                            var idSEN = soft.CV_JUNSENIOR.Where(a => a.JunSenior == "Senior").FirstOrDefault().IDJunSenior;
+
+                            if (soft.CV_EXPSWTPH.Where(a => a.IDJunSenior == del.IDJunSenior).Count() != 0 || soft.CV_CVBASE.Where(a => a.IDJunSenior == del.IDJunSenior).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                if (del.IDJunSenior != idJUN && del.IDJunSenior != idSEN)
+                                {
+                                    soft.CV_JUNSENIOR.Remove(del);
+
+                                    soft.SaveChanges();
+
+
+                                    var w = new Form() { Size = new Size(0, 0) };
+                                    Task.Delay(TimeSpan.FromSeconds(1))
+                                        .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                    //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                    remplir();
+                                }
+                                else
+                                    MessageBox.Show("You can't delete Junior and Senior", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
 
                         //TECHNICAL FIELD//
@@ -1933,20 +2071,27 @@ namespace CVBASESWISS
                         {
                             var del = soft.CV_TECHNICFIELD.Where(a => a.IDTechField == GridSelect).FirstOrDefault();
 
-                            soft.CV_TECHNICFIELD.Remove(del);
+                            if (soft.CV_INTLEXPTECH.Where(a => a.IDTechField == del.IDTechField).Count() != 0)
+                            {
+                                MessageBox.Show("Vous ne pouvez pas effectuer cette action!", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                soft.CV_TECHNICFIELD.Remove(del);
 
-                            soft.SaveChanges();
-
-
-                            var w = new Form() { Size = new Size(0, 0) };
-                            Task.Delay(TimeSpan.FromSeconds(1))
-                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-
-                            //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                soft.SaveChanges();
 
 
-                            remplir();
+                                var w = new Form() { Size = new Size(0, 0) };
+                                Task.Delay(TimeSpan.FromSeconds(1))
+                                    .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+
+                                //MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(w, "Successful", "CVBASE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                                remplir();
+                            }
                         }
 
                         textVal.Text = null;
